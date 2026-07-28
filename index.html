@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thembinkosi Dladla | Portfolio</title>
+    <link rel="icon" type="image/png" href="/favicon.ico" />
     <link rel="stylesheet" href="css/styles.css" />
     <!-- Font Awesome for icons -->
     <link
@@ -17,52 +18,47 @@
     />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#">TD</a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-right">
-                <button class="lang-toggle">EN</button>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    <div id="root">
+        <div class="app">
+            <!-- Navigation -->
+            <nav class="navbar">
+                <div class="menu">
+                    <img class="menuBtn" src="assets/nav/menuIcon.png" alt="Menu button" />
+                    <ul class="menuItems">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <select class="langSelect">
+                        <option value="en">EN</option>
+                    </select>
                 </div>
-            </div>
-        </div>
-    </nav>
+            </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-name">Thembinkosi Dladla</h1>
-                <p class="hero-title">BCom Honours Student in Information Systems & Technology</p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">
-                        <i class="fas fa-file-pdf"></i> Download CV
-                    </a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <!-- Hero Section -->
+            <section class="heroContainer">
+                <div class="heroContent">
+                    <div>
+                        <h1 class="heroTitle">Thembinkosi Dladla</h1>
+                        <p class="heroDescription">BCom Honours Student in Information Systems & Technology</p>
+                    </div>
+                    <div class="heroButtons">
+                        <a href="#" download class="downloadBtn">Download CV</a>
+                        <a href="#contact" class="contactBtn">Contact Me</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-placeholder">
-                    <i class="fas fa-user-circle"></i>
-                </div>
-            </div>
+                <img 
+                    src="assets/hero/heroImage.png" 
+                    alt="Hero image of Thembinkosi Dladla" 
+                    class="heroImg"
+                />
+                <div class="topBlur"></div>
+            </section>
         </div>
-    </section>
+    </div>
 
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
