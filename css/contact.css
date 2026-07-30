@@ -19,7 +19,7 @@
 }
 
 .contact-greeting {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 600;
     color: var(--color-text);
     letter-spacing: 0.5px;
@@ -30,7 +30,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    align-items: center;
+    align-items: start;
 }
 
 /* ===== Left Column - Social Links ===== */
@@ -41,52 +41,59 @@
 }
 
 .contact-social-title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     color: var(--color-bt);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     letter-spacing: 0.5px;
 }
 
 .social-links-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .social-link-item {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 14px 18px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 12px;
+    gap: 20px;
+    padding: 18px 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     cursor: pointer;
 }
 
 .social-link-item:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateX(6px);
-    border-color: rgba(249, 188, 96, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(8px);
+    border-color: rgba(249, 188, 96, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .social-link-icon {
-    width: 44px;
-    height: 44px;
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
     flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.social-link-item:hover .social-link-icon {
+    background: rgba(249, 188, 96, 0.15);
+    transform: scale(1.05);
 }
 
 .social-link-icon img {
-    width: 26px;
-    height: 26px;
+    width: 34px;
+    height: 34px;
     object-fit: contain;
 }
 
@@ -95,23 +102,25 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
+    gap: 2px;
 }
 
 .social-link-label {
-    font-size: 13px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
 }
 
 .social-link-handle {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--color-text);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: color 0.3s ease;
 }
 
 .social-link-item:hover .social-link-handle {
@@ -119,28 +128,33 @@
 }
 
 .social-link-arrow {
-    color: rgba(255, 255, 255, 0.2);
-    font-size: 18px;
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 22px;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .social-link-item:hover .social-link-arrow {
     color: var(--color-bt);
-    transform: translateX(4px);
+    transform: translateX(6px);
 }
 
 /* ===== Location Block ===== */
 .contact-location-block {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 18px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    gap: 14px;
+    padding: 16px 22px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-location-block span:first-child {
+    font-size: 24px;
 }
 
 /* ===== Right Column - Profile Photos ===== */
@@ -152,8 +166,9 @@
 
 .photo-stack {
     position: relative;
-    width: 420px;
-    height: 420px;
+    margin-top: 48px;
+    width: 750px;
+    height: 750px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
@@ -183,12 +198,12 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
     border: 2px solid rgba(255, 255, 255, 0.15);
     color: white;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -208,43 +223,43 @@
 .photo-nav:hover {
     background: var(--color-bt);
     border-color: var(--color-bt);
-    transform: translateY(-50%) scale(1.05);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .photo-nav svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
 }
 
 .photo-nav-prev {
-    left: 12px;
+    left: 16px;
 }
 
 .photo-nav-next {
-    right: 12px;
+    right: 16px;
 }
 
 /* ===== Photo Indicators ===== */
 .photo-indicators {
     position: absolute;
-    bottom: 20px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
+    gap: 12px;
     z-index: 15;
     background: rgba(0, 0, 0, 0.6);
-    padding: 10px 18px;
+    padding: 12px 22px;
     border-radius: 30px;
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .photo-indicators .dot {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.2);
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
@@ -253,13 +268,13 @@
 
 .photo-indicators .dot.active {
     background: var(--color-bt);
-    transform: scale(1.2);
-    box-shadow: 0 0 20px rgba(249, 188, 96, 0.4);
+    transform: scale(1.3);
+    box-shadow: 0 0 25px rgba(249, 188, 96, 0.5);
 }
 
 .photo-indicators .dot:hover {
-    background: rgba(255, 255, 255, 0.6);
-    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.15);
 }
 
 /* ===== Footer Bottom ===== */
@@ -316,8 +331,26 @@
     }
     
     .photo-stack {
-        width: 340px;
-        height: 340px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .social-link-item {
+        padding: 15px 20px;
+    }
+
+    .social-link-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .social-link-icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .social-link-handle {
+        font-size: 16px;
     }
 }
 
@@ -328,7 +361,7 @@
     }
 
     .contact-greeting {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .contact-grid {
@@ -345,28 +378,62 @@
     }
 
     .photo-stack {
-        width: 320px;
-        height: 320px;
+        width: 350px;
+        height: 350px;
     }
 
     .photo-nav {
         opacity: 1;
         pointer-events: auto;
-        width: 38px;
-        height: 38px;
+        width: 42px;
+        height: 42px;
     }
 
     .photo-nav svg {
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .photo-indicators {
+        padding: 10px 18px;
+        gap: 10px;
+    }
+
+    .photo-indicators .dot {
+        width: 12px;
+        height: 12px;
     }
 
     .social-link-item {
-        padding: 12px 14px;
+        padding: 14px 18px;
+        gap: 16px;
+    }
+
+    .social-link-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .social-link-icon img {
+        width: 26px;
+        height: 26px;
     }
 
     .social-link-handle {
-        font-size: 14px;
+        font-size: 15px;
+    }
+
+    .social-link-label {
+        font-size: 13px;
+    }
+
+    .contact-social-title {
+        font-size: 20px;
+    }
+
+    .contact-location-block {
+        font-size: 16px;
+        padding: 14px 18px;
     }
 }
 
@@ -381,7 +448,7 @@
     }
 
     .contact-social-title {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     .photo-stack {
@@ -391,15 +458,15 @@
     }
 
     .photo-nav {
-        width: 34px;
-        height: 34px;
+        width: 36px;
+        height: 36px;
         opacity: 1;
         pointer-events: auto;
     }
 
     .photo-nav svg {
-        width: 14px;
-        height: 14px;
+        width: 16px;
+        height: 16px;
     }
 
     .photo-nav-prev {
@@ -422,22 +489,24 @@
     }
 
     .social-link-item {
-        padding: 10px 12px;
-        gap: 12px;
+        padding: 12px 14px;
+        gap: 14px;
+        border-radius: 12px;
     }
 
     .social-link-icon {
-        width: 36px;
-        height: 36px;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
     }
 
     .social-link-icon img {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
     }
 
     .social-link-handle {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .social-link-label {
@@ -445,12 +514,17 @@
     }
 
     .social-link-arrow {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .contact-location-block {
         font-size: 14px;
-        padding: 10px 14px;
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+    .contact-location-block span:first-child {
+        font-size: 18px;
     }
 
     .footer-bottom p {
