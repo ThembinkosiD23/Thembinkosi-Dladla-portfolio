@@ -1,0 +1,256 @@
+/* ===== About Section ===== */
+.about-container {
+    position: relative;
+    background-color: rgba(12, 12, 12, 0.6);
+    border-radius: 15px;
+    padding: 73px;
+    margin-top: 80px;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 1;
+}
+
+.section-title {
+    color: var(--color-text);
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-items {
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    max-width: 900px;
+    list-style: none;
+}
+
+.about-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    padding: 25px;
+    background-image: linear-gradient(
+        90deg,
+        rgba(165, 215, 232, 0.42) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: 0.4s ease;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+/* Animation when visible */
+.about-item.visible {
+    animation: slideInFromRight 0.9s ease-out forwards;
+}
+
+.about-item:nth-child(1).visible {
+    animation-delay: 0.2s;
+}
+
+.about-item:nth-child(2).visible {
+    animation-delay: 0.5s;
+}
+
+.about-item:nth-child(3).visible {
+    animation-delay: 0.8s;
+}
+
+.about-item:hover {
+    background-size: 100% 100%;
+}
+
+/* Hover effect on title */
+.about-item:hover h3 {
+    color: var(--color-bt);
+}
+
+.about-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.about-text h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* ===== Download Journey Button ===== */
+.about-download {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-journey {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, var(--color-bt), #f7a85a);
+    color: var(--color-dark);
+    padding: 18px 40px;
+    border-radius: 100px;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(249, 188, 96, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-journey::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-journey:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(249, 188, 96, 0.5);
+}
+
+.btn-journey:hover::before {
+    left: 100%;
+}
+
+.btn-journey .btn-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.btn-journey .btn-subtext {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.8;
+    display: block;
+    margin-top: 2px;
+}
+
+/* ===== Animations ===== */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 830px) {
+    .about-container {
+        background-color: transparent;
+        padding: 40px 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 40px;
+    }
+
+    .about-items {
+        gap: 30px;
+    }
+
+    .about-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .about-item.visible {
+        animation: none;
+        opacity: 1;
+    }
+
+    .about-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .about-text h3 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+    }
+
+    .btn-journey {
+        padding: 15px 25px;
+        font-size: 18px;
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .btn-journey .btn-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .btn-journey .btn-subtext {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .about-text h3 {
+        font-size: 20px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .btn-journey {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}

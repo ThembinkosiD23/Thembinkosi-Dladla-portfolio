@@ -112,3 +112,22 @@ document.querySelectorAll('.hero-content, .hero-image').forEach(el => {
 });
 
 console.log('Portfolio loaded successfully! 🚀');
+
+// ============================================
+// INTERSECTION OBSERVER - About Section
+// ============================================
+const aboutObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
+
+// Observe about items
+document.querySelectorAll('.about-item').forEach(item => {
+    aboutObserver.observe(item);
+});
