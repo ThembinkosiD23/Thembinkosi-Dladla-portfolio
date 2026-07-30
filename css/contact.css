@@ -19,14 +19,10 @@
 }
 
 .contact-greeting {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     color: var(--color-text);
     letter-spacing: 0.5px;
-}
-
-.contact-greeting span {
-    color: var(--color-bt);
 }
 
 /* ===== Two Column Grid ===== */
@@ -156,12 +152,12 @@
 
 .photo-stack {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 420px;
+    height: 420px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-    border: 2px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(255, 255, 255, 0.08);
 }
 
 .photo-stack .photo {
@@ -172,44 +168,98 @@
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 0.8s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
+    user-select: none;
+    -webkit-user-drag: none;
+    touch-action: none;
 }
 
 .photo-stack .photo.active {
     opacity: 1;
 }
 
+/* ===== Navigation Arrows ===== */
+.photo-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.photo-stack:hover .photo-nav {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.photo-nav:hover {
+    background: var(--color-bt);
+    border-color: var(--color-bt);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.photo-nav svg {
+    width: 20px;
+    height: 20px;
+}
+
+.photo-nav-prev {
+    left: 12px;
+}
+
+.photo-nav-next {
+    right: 12px;
+}
+
 /* ===== Photo Indicators ===== */
 .photo-indicators {
     position: absolute;
-    bottom: 16px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 8px;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 8px 14px;
-    border-radius: 20px;
+    gap: 10px;
+    z-index: 15;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 18px;
+    border-radius: 30px;
     backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .photo-indicators .dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.25);
     cursor: pointer;
     transition: all 0.3s ease;
+    border: none;
+    padding: 0;
 }
 
 .photo-indicators .dot.active {
     background: var(--color-bt);
     transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(249, 188, 96, 0.4);
 }
 
 .photo-indicators .dot:hover {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
 }
 
 /* ===== Footer Bottom ===== */
@@ -266,8 +316,8 @@
     }
     
     .photo-stack {
-        width: 280px;
-        height: 280px;
+        width: 340px;
+        height: 340px;
     }
 }
 
@@ -278,7 +328,7 @@
     }
 
     .contact-greeting {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .contact-grid {
@@ -295,8 +345,20 @@
     }
 
     .photo-stack {
-        width: 260px;
-        height: 260px;
+        width: 320px;
+        height: 320px;
+    }
+
+    .photo-nav {
+        opacity: 1;
+        pointer-events: auto;
+        width: 38px;
+        height: 38px;
+    }
+
+    .photo-nav svg {
+        width: 16px;
+        height: 16px;
     }
 
     .social-link-item {
@@ -315,7 +377,7 @@
     }
 
     .contact-greeting {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .contact-social-title {
@@ -323,9 +385,40 @@
     }
 
     .photo-stack {
-        width: 220px;
-        height: 220px;
+        width: 280px;
+        height: 280px;
         border-radius: 14px;
+    }
+
+    .photo-nav {
+        width: 34px;
+        height: 34px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .photo-nav svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .photo-nav-prev {
+        left: 8px;
+    }
+
+    .photo-nav-next {
+        right: 8px;
+    }
+
+    .photo-indicators {
+        padding: 8px 14px;
+        gap: 8px;
+        bottom: 14px;
+    }
+
+    .photo-indicators .dot {
+        width: 10px;
+        height: 10px;
     }
 
     .social-link-item {
@@ -358,11 +451,6 @@
     .contact-location-block {
         font-size: 14px;
         padding: 10px 14px;
-    }
-
-    .photo-indicators .dot {
-        width: 8px;
-        height: 8px;
     }
 
     .footer-bottom p {
