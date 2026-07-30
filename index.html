@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/experience.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/toggler.css">
+    <link rel="stylesheet" href="css/toggle.css">
 </head>
 <body>
 
@@ -152,137 +152,156 @@
         </a>
     </div>
 </section>
-<!-- ===== SOFT SKILLS SECTION ===== -->
-<section class="toggle-section" id="soft-skills">
-    <div class="toggle-header">
-        <h2 class="section-title">My Soft Skills</h2>
-        <button class="toggle-btn" data-target="softSkillsContent">
-            <span class="btn-text">Show Soft Skills</span>
-            <span class="btn-icon">▼</span>
-        </button>
-    </div>
-    <div class="toggle-content" id="softSkillsContent">
-        <div class="soft-skills-grid">
-            <!-- Adaptability -->
-            <div class="soft-skill-card">
-                <div class="soft-skill-icon">🔄</div>
-                <h3>Adaptability</h3>
-                <blockquote>
-                    "The fast-paced nature of software development excites me. I'm quick to learn and embrace new tools, frameworks, and technologies, and I adapt easily to changing requirements or unexpected obstacles. This flexibility allows me to stay ahead and contribute meaningfully, no matter the situation."
-                </blockquote>
-                <div class="soft-skill-author">— Thembinkosi Dladla</div>
-            </div>
 
-            <!-- Problem Solving -->
-            <div class="soft-skill-card">
-                <div class="soft-skill-icon">🧩</div>
-                <h3>Problem Solving</h3>
-                <blockquote>
-                    "I genuinely enjoy tackling challenging problems. When faced with an issue, I break it down methodically, identify the root cause, and explore multiple solutions to find the most efficient one. This mindset has consistently helped me deliver high-quality results under tight deadlines."
-                </blockquote>
-                <div class="soft-skill-author">— Thembinkosi Dladla</div>
-            </div>
-
-            <!-- Teamwork -->
-            <div class="soft-skill-card">
-                <div class="soft-skill-icon">🤝</div>
-                <h3>Teamwork</h3>
-                <blockquote>
-                    "I thrive in collaborative environments. I'm always open to listening to different perspectives, offering constructive feedback, and supporting my team whenever needed. My ability to work well with others has helped foster strong, productive relationships in every team I've been part of."
-                </blockquote>
-                <div class="soft-skill-author">— Thembinkosi Dladla</div>
-            </div>
-
-            <!-- Communication -->
-            <div class="soft-skill-card">
-                <div class="soft-skill-icon">💬</div>
-                <h3>Communication</h3>
-                <blockquote>
-                    "I pride myself on being able to explain complex technical concepts in simple terms. Whether I'm working with teammates, stakeholders, or clients, I ensure that everyone is on the same page, which has helped avoid miscommunication and keep projects running smoothly."
-                </blockquote>
-                <div class="soft-skill-author">— Thembinkosi Dladla</div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ===== HOBBIES SECTION ===== -->
-<section class="toggle-section" id="hobbies">
-    <div class="toggle-header">
-        <h2 class="section-title">My Hobbies and Social Activities Gallery</h2>
-        <button class="toggle-btn" data-target="hobbiesContent">
-            <span class="btn-text">Show Hobbies Gallery</span>
-            <span class="btn-icon">▼</span>
-        </button>
-    </div>
-    <div class="toggle-content" id="hobbiesContent">
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="assets/images/hobbies/running.jpeg" alt="Running">
-                <div class="gallery-caption">🏃 Running</div>
+<!-- ===== TOGGLE SECTIONS ===== -->
+<section class="toggle-sections-wrapper" id="extras">
+    
+    <!-- Soft Skills -->
+    <div class="toggle-card">
+        <div class="toggle-card-header" onclick="toggleSection('softSkillsContent', this)">
+            <div class="toggle-card-left">
+                <span class="toggle-icon"></span>
+                <h3>My Soft Skills</h3>
             </div>
-            <div class="gallery-item">
-                <img src="assets/images/hobbies/music.jpeg" alt="Music">
-                <div class="gallery-caption">🎵 Music</div>
+            <div class="toggle-card-right">
+                <span class="toggle-status">Show Soft Skills</span>
+                <span class="toggle-arrow">▼</span>
             </div>
-            <div class="gallery-item">
-                <img src="assets/images/hobbies/reading.jpeg" alt="Reading">
-                <div class="gallery-caption">📚 Reading</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/hobbies/tech.jpeg" alt="Tech Events">
-                <div class="gallery-caption">💻 Tech Events</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/hobbies/travel.jpeg" alt="Travel">
-                <div class="gallery-caption">✈️ Travel</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/hobbies/fitness.jpeg" alt="Fitness">
-                <div class="gallery-caption">💪 Fitness</div>
+        </div>
+        <div class="toggle-card-content" id="softSkillsContent">
+            <div class="soft-skills-grid">
+                <!-- Adaptability -->
+                <div class="soft-skill-card">
+                    <div class="soft-skill-icon"></div>
+                    <h4>Adaptability</h4>
+                    <blockquote>
+                        "The fast-paced nature of software development excites me. I'm quick to learn and embrace new tools, frameworks, and technologies, and I adapt easily to changing requirements or unexpected obstacles. This flexibility allows me to stay ahead and contribute meaningfully, no matter the situation."
+                    </blockquote>
+                    <div class="soft-skill-author">— Thembinkosi Dladla</div>
+                </div>
+
+                <!-- Problem Solving -->
+                <div class="soft-skill-card">
+                    <div class="soft-skill-icon"></div>
+                    <h4>Problem Solving</h4>
+                    <blockquote>
+                        "I genuinely enjoy tackling challenging problems. When faced with an issue, I break it down methodically, identify the root cause, and explore multiple solutions to find the most efficient one. This mindset has consistently helped me deliver high-quality results under tight deadlines."
+                    </blockquote>
+                    <div class="soft-skill-author">— Thembinkosi Dladla</div>
+                </div>
+
+                <!-- Teamwork -->
+                <div class="soft-skill-card">
+                    <div class="soft-skill-icon"></div>
+                    <h4>Teamwork</h4>
+                    <blockquote>
+                        "I thrive in collaborative environments. I'm always open to listening to different perspectives, offering constructive feedback, and supporting my team whenever needed. My ability to work well with others has helped foster strong, productive relationships in every team I've been part of."
+                    </blockquote>
+                    <div class="soft-skill-author">— Thembinkosi Dladla</div>
+                </div>
+
+                <!-- Communication -->
+                <div class="soft-skill-card">
+                    <div class="soft-skill-icon"></div>
+                    <h4>Communication</h4>
+                    <blockquote>
+                        "I pride myself on being able to explain complex technical concepts in simple terms. Whether I'm working with teammates, stakeholders, or clients, I ensure that everyone is on the same page, which has helped avoid miscommunication and keep projects running smoothly."
+                    </blockquote>
+                    <div class="soft-skill-author">— Thembinkosi Dladla</div>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Hobbies Gallery -->
+    <div class="toggle-card">
+        <div class="toggle-card-header" onclick="toggleSection('hobbiesContent', this)">
+            <div class="toggle-card-left">
+                <span class="toggle-icon"></span>
+                <h3>My Hobbies and Social Activities Gallery</h3>
+            </div>
+            <div class="toggle-card-right">
+                <span class="toggle-status">Show Hobbies Gallery</span>
+                <span class="toggle-arrow">▼</span>
+            </div>
+        </div>
+        <div class="toggle-card-content" id="hobbiesContent">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/running.jpeg" alt="Running">
+                    <div class="gallery-caption"> Running</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/music.jpeg" alt="Music">
+                    <div class="gallery-caption"> Music</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/reading.jpeg" alt="Reading">
+                    <div class="gallery-caption">Reading</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/tech.jpeg" alt="Tech Events">
+                    <div class="gallery-caption">Tech Events</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/travel.jpeg" alt="Travel">
+                    <div class="gallery-caption">Hiking</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/fitness.jpeg" alt="Fitness">
+                    <div class="gallery-caption">Fitness</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificates Gallery -->
+    <div class="toggle-card">
+        <div class="toggle-card-header" onclick="toggleSection('certificatesContent', this)">
+            <div class="toggle-card-left">
+                <span class="toggle-icon"></span>
+                <h3>My Certificates & Achievements Gallery</h3>
+            </div>
+            <div class="toggle-card-right">
+                <span class="toggle-status">Show Achievements Gallery</span>
+                <span class="toggle-arrow">▼</span>
+            </div>
+        </div>
+        <div class="toggle-card-content" id="certificatesContent">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-1.jpeg" alt="Certificate 1">
+                    <div class="gallery-caption"> Google Cybersecurity</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-2.jpeg" alt="Certificate 2">
+                    <div class="gallery-caption">Python for Data Science</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-3.jpeg" alt="Certificate 3">
+                    <div class="gallery-caption"> Artificial Intelligence</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-4.jpeg" alt="Certificate 4">
+                    <div class="gallery-caption"> Software Engineering</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-5.jpeg" alt="Certificate 5">
+                    <div class="gallery-caption"> Cloud Computing</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-6.jpeg" alt="Certificate 6">
+                    <div class="gallery-caption">WeThinkCode_ GenAI Course for Software Engineers</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 
-<!-- ===== CERTIFICATES SECTION ===== -->
-<section class="toggle-section" id="certificates">
-    <div class="toggle-header">
-        <h2 class="section-title">My Certificates & Achievements Gallery</h2>
-        <button class="toggle-btn" data-target="certificatesContent">
-            <span class="btn-text">Show Achievements Gallery</span>
-            <span class="btn-icon">▼</span>
-        </button>
-    </div>
-    <div class="toggle-content" id="certificatesContent">
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="assets/images/certificates/cert-1.jpg" alt="Certificate 1">
-                <div class="gallery-caption">🏆 Google Cybersecurity</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/certificates/cert-2.jpg" alt="Certificate 2">
-                <div class="gallery-caption">🏆 Python for Data Science</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/certificates/cert-3.jpg" alt="Certificate 3">
-                <div class="gallery-caption">🏆 Artificial Intelligence</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/certificates/cert-4.jpg" alt="Certificate 4">
-                <div class="gallery-caption">🏆 Software Engineering</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/certificates/cert-5.jpg" alt="Certificate 5">
-                <div class="gallery-caption">🏆 Cloud Computing</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/certificates/cert-6.jpg" alt="Certificate 6">
-                <div class="gallery-caption">🏆 Full-Stack Development</div>
-            </div>
-        </div>
-    </div>
-</section>
+
 <!-- ===== EXPERIENCE & SKILLS SECTION ===== -->
 <section class="experience-container" id="experience">
     <div class="experience-box">
@@ -574,8 +593,8 @@
                 
                 <!-- Location -->
                 <div class="contact-location-block">
-                    <span>📍</span>
-                    <span>Johannesburg, South Africa</span>
+                    <span></span>
+                    <span>Durban, South Africa</span>
                 </div>
             </div>
             
@@ -640,6 +659,6 @@
     </div>
 </div>
 
-<script src="js/main.js"></script></body>
+<script src="js/script.js"></script></body>
 </html>
 
