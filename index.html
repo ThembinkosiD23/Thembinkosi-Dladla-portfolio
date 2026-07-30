@@ -442,44 +442,132 @@
     </div>
 </section>
 
-<!-- ===== CONTACT/FOOTER SECTION ===== -->
-<footer class="contact-container" id="contact">
-    <div class="contact-content">
-        <div class="contact-text">
-            <h2>Get In Touch</h2>
-            <p>Let's connect and create something amazing together</p>
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact-container" id="contact">
+    <div class="contact-wrapper">
+        
+        <!-- Greeting at Top -->
+        <div class="contact-greeting-wrapper">
+            <p class="contact-greeting">👋 Nice to meet you, I'm Thembinkosi</p>
         </div>
-        <ul class="contact-links">
-            <!-- Email -->
-            <li class="contact-link">
-                <a href="#" onclick="copyToClipboard('dladlathembinkosi75@gmail.com', 'Email')">
-                    <img src="assets/images/contact/email-icon.png" alt="Email">
-                </a>
-            </li>
-            <!-- LinkedIn -->
-            <li class="contact-link">
-                <a href="https://www.linkedin.com/in/thembinkosi-stephan-dladla/" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/images/contact/linkedin-icon.png" alt="LinkedIn">
-                </a>
-            </li>
-            <!-- GitHub -->
-            <li class="contact-link">
-                <a href="https://github.com/Stephan-23" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/images/contact/github-icon.png" alt="GitHub">
-                </a>
-            </li>
-            <!-- Phone -->
-            <li class="contact-link">
-                <a href="#" onclick="copyToClipboard('+27 73 419 4031', 'Phone')">
-                    <img src="assets/images/contact/phone-icon.png" alt="Phone">
-                </a>
-            </li>
-        </ul>
+        
+        <!-- Two Column Grid -->
+        <div class="contact-grid">
+            
+            <!-- Left Column - Social Links -->
+            <div class="contact-socials">
+                <h3 class="contact-social-title">📱 Connect with me</h3>
+                
+                <div class="social-links-list">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/thembinkosi-stephan-dladla/" target="_blank" rel="noopener noreferrer" class="social-link-item">
+                        <div class="social-link-icon">
+                            <img src="assets/images/contact/linkedin-icon.png" alt="LinkedIn">
+                        </div>
+                        <div class="social-link-info">
+                            <span class="social-link-label">LinkedIn</span>
+                            <span class="social-link-handle">@thembinkosi-stephan-dladla</span>
+                        </div>
+                        <span class="social-link-arrow">→</span>
+                    </a>
+                    
+                    <!-- GitHub -->
+                    <a href="https://github.com/Stephan-23" target="_blank" rel="noopener noreferrer" class="social-link-item">
+                        <div class="social-link-icon">
+                            <img src="assets/images/contact/github-icon.png" alt="GitHub">
+                        </div>
+                        <div class="social-link-info">
+                            <span class="social-link-label">GitHub</span>
+                            <span class="social-link-handle">@Stephan-23</span>
+                        </div>
+                        <span class="social-link-arrow">→</span>
+                    </a>
+                    
+                    <!-- X (Twitter) -->
+                    <a href="#" class="social-link-item">
+                        <div class="social-link-icon">
+                            <img src="assets/images/contact/x-icon.png" alt="X (Twitter)">
+                        </div>
+                        <div class="social-link-info">
+                            <span class="social-link-label">X (Twitter)</span>
+                            <span class="social-link-handle">@thembinkosi_d</span>
+                        </div>
+                        <span class="social-link-arrow">→</span>
+                    </a>
+                    
+                    <!-- Email -->
+                    <a href="mailto:dladlathembinkosi75@gmail.com" class="social-link-item">
+                        <div class="social-link-icon">
+                            <img src="assets/images/contact/email-icon.png" alt="Email">
+                        </div>
+                        <div class="social-link-info">
+                            <span class="social-link-label">Email</span>
+                            <span class="social-link-handle">dladlathembinkosi75@gmail.com</span>
+                        </div>
+                        <span class="social-link-arrow">→</span>
+                    </a>
+                    
+                    <!-- Phone -->
+                    <a href="#" onclick="copyToClipboard('+27 73 419 4031', 'Phone')" class="social-link-item">
+                        <div class="social-link-icon">
+                            <img src="assets/images/contact/phone-icon.png" alt="Phone">
+                        </div>
+                        <div class="social-link-info">
+                            <span class="social-link-label">Phone</span>
+                            <span class="social-link-handle">+27 73 419 4031</span>
+                        </div>
+                        <span class="social-link-arrow">→</span>
+                    </a>
+                </div>
+                
+                <!-- Location -->
+                <div class="contact-location-block">
+                    <span>📍</span>
+                    <span>Johannesburg, South Africa</span>
+                </div>
+            </div>
+            
+            <!-- Right Column - Profile Photos (Rotating) -->
+            <div class="contact-photos">
+                <div class="photo-stack" id="photoStack">
+                    <img src="assets/images/contact/profile-1.jpg" alt="Thembinkosi Dladla 1" class="photo active" data-index="0">
+                    <img src="assets/images/contact/profile-2.jpg" alt="Thembinkosi Dladla 2" class="photo" data-index="1">
+                    <img src="assets/images/contact/profile-3.jpg" alt="Thembinkosi Dladla 3" class="photo" data-index="2">
+                    <img src="assets/images/contact/profile-4.jpg" alt="Thembinkosi Dladla 4" class="photo" data-index="3">
+                    <img src="assets/images/contact/profile-5.jpg" alt="Thembinkosi Dladla 5" class="photo" data-index="4">
+                    
+                    <!-- Navigation Arrows -->
+                    <button class="photo-nav photo-nav-prev" id="prevPhoto" aria-label="Previous photo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"/>
+                        </svg>
+                    </button>
+                    <button class="photo-nav photo-nav-next" id="nextPhoto" aria-label="Next photo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Photo Indicators -->
+                    <div class="photo-indicators">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
     </div>
+    
+    <!-- Footer Bottom -->
     <div class="footer-bottom">
         <p>&copy; 2026 Thembinkosi Dladla. All rights reserved.</p>
     </div>
-</footer>
+</section>
 
     <!-- Contact Modal (for the "Contact Me" button) -->
     <div class="modal-overlay" id="contactModal">

@@ -1,0 +1,378 @@
+/* ===== Contact Section ===== */
+.contact-container {
+    color: var(--color-text);
+    margin-top: 80px;
+    background-color: var(--color-secondary);
+    width: 100%;
+    padding: 60px 10% 30px;
+}
+
+.contact-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== Greeting at Top ===== */
+.contact-greeting-wrapper {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-greeting {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: 0.5px;
+}
+
+.contact-greeting span {
+    color: var(--color-bt);
+}
+
+/* ===== Two Column Grid ===== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* ===== Left Column - Social Links ===== */
+.contact-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-social-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-bt);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.social-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-link-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.social-link-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(6px);
+    border-color: rgba(249, 188, 96, 0.2);
+}
+
+.social-link-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.social-link-icon img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.social-link-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.social-link-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.social-link-handle {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.social-link-item:hover .social-link-handle {
+    color: var(--color-bt);
+}
+
+.social-link-arrow {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.social-link-item:hover .social-link-arrow {
+    color: var(--color-bt);
+    transform: translateX(4px);
+}
+
+/* ===== Location Block ===== */
+.contact-location-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== Right Column - Profile Photos ===== */
+.contact-photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-stack {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.photo-stack .photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.photo-stack .photo.active {
+    opacity: 1;
+}
+
+/* ===== Photo Indicators ===== */
+.photo-indicators {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 14px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.photo-indicators .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.photo-indicators .dot.active {
+    background: var(--color-bt);
+    transform: scale(1.2);
+}
+
+.photo-indicators .dot:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== Footer Bottom ===== */
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    opacity: 0.4;
+    color: var(--color-text);
+}
+
+/* ===== Toast Notification ===== */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-bt);
+    color: var(--color-dark);
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    animation: slideUp 0.3s ease-out forwards;
+    display: none;
+}
+
+.toast.show {
+    display: block;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+    .contact-grid {
+        gap: 40px;
+    }
+    
+    .photo-stack {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .contact-container {
+        padding: 40px 5% 25px;
+        margin-top: 50px;
+    }
+
+    .contact-greeting {
+        font-size: 22px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-socials {
+        order: 1;
+    }
+
+    .contact-photos {
+        order: 0;
+    }
+
+    .photo-stack {
+        width: 260px;
+        height: 260px;
+    }
+
+    .social-link-item {
+        padding: 12px 14px;
+    }
+
+    .social-link-handle {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-container {
+        padding: 30px 4% 20px;
+        margin-top: 40px;
+    }
+
+    .contact-greeting {
+        font-size: 18px;
+    }
+
+    .contact-social-title {
+        font-size: 17px;
+    }
+
+    .photo-stack {
+        width: 220px;
+        height: 220px;
+        border-radius: 14px;
+    }
+
+    .social-link-item {
+        padding: 10px 12px;
+        gap: 12px;
+    }
+
+    .social-link-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-link-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-link-handle {
+        font-size: 13px;
+    }
+
+    .social-link-label {
+        font-size: 11px;
+    }
+
+    .social-link-arrow {
+        font-size: 14px;
+    }
+
+    .contact-location-block {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .photo-indicators .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+
+    .toast {
+        font-size: 13px;
+        padding: 10px 18px;
+        width: 90%;
+        text-align: center;
+    }
+}
