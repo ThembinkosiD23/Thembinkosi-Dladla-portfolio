@@ -1,68 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thembinkosi Dladla | Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- Font Awesome for icons -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thembinkosi Dladla - Portfolio</title>
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.ico">
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/toggle.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#">TD</a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="site-navbar" id="pb-navbar">
+    <div class="container">
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" id="navToggle" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" id="menuIcon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+            <ul class="navbar-nav" id="navMenu">
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
-            <div class="nav-right">
-                <button class="lang-toggle">EN</button>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->  <!-- ===== HERO SECTION ===== -->
+<!-- ===== HERO SECTION ===== -->
+<section class="site-hero" id="home">
+    <!-- Full Background Image -->
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <div class="row intro-text align-items-center justify-content-center">
+            <div class="col-md-10 text-center pt-5">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="site-heading">
+                    <strong>Thembinkosi Dladla</strong>
+                </h1>
+                <p class="hero-role">A Full-Stack Software Developer</p>
+                
+            <div class="hero-actions mt-4">
+                <a href="/assets/Thembinkosi_Dladla_Resume.pdf" download class="btn btn-primary">
+                    Download CV
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </div>
+</div></section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about-container" id="about">
+    <h2 class="section-title">About Me</h2>
+    
+    <div class="about-summary">
+        <p class="about-bio">
+            Final-year BCom (Honours) in Information Systems and Technology student with a BSc in Computer Science and IT from the University of KwaZulu-Natal. Passionate software developer with full-stack experience and a proven track record in building scalable applications and automation solutions. Strong background in data analytics, ETL processes, and cloud-based solutions.
+        </p>
+    </div>
+
+    <div class="about-grid">
+        <!-- LEFT COLUMN: Education -->
+        <div class="about-left">
+            <h3 class="education-title"> Education</h3>
+            <div class="education-list">
+                <div class="education-item">
+                    <div class="edu-logo">
+                        <img src="assets/images/about/ukzn.jpeg" alt="UKZN Logo">
+                    </div>
+                    <div class="edu-info">
+                        <h4>BCom (Honours) in Information Systems and Technology</h4>
+                        <p class="edu-institution">University of KwaZulu-Natal</p>
+                        <p class="edu-date">In Progress</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="edu-logo">
+                        <img src="assets/images/about/ukzn.jpeg" alt="UKZN Logo">
+                    </div>
+                    <div class="edu-info">
+                        <h4>BSc in Computer Science and Information Technology</h4>
+                        <p class="edu-institution">University of KwaZulu-Natal</p>
+                        <p class="edu-date">2019 - 2023</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="edu-logo">
+                        <img src="assets/images/about/school-logo.png" alt="School Logo">
+                    </div>
+                    <div class="edu-info">
+                        <h4>Mashingizela High School</h4>
+                        <p class="edu-institution">National Senior Certificate</p>
+                        <p class="edu-date">2014 - 2018</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-name">Thembinkosi Dladla</h1>
-                <p class="hero-title">BCom Honours Student in Information Systems & Technology</p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">
-                        <i class="fas fa-file-pdf"></i> Download CV
+        <!-- RIGHT COLUMN: Skills Cards -->
+        <div class="about-right">
+            <ul class="about-items">
+                <li class="about-item">
+                    <img src="assets/images/about/front.png" alt="Frontend" class="about-icon">
+                    <div class="about-text">
+                        <h3>Frontend Development</h3>
+                        <p>Building responsive interfaces with React, HTML, CSS, and JavaScript.</p>
+                    </div>
+                </li>
+                <li class="about-item">
+                    <img src="assets/images/about/back.png" alt="Backend" class="about-icon">
+                    <div class="about-text">
+                        <h3>Backend Development</h3>
+                        <p>Creating robust APIs with C#, ASP.NET Core, Node.js, and Python.</p>
+                    </div>
+                </li>
+                <li class="about-item">
+                    <img src="assets/images/about/other.png" alt="Other" class="about-icon">
+                    <div class="about-text">
+                        <h3>Data & Cloud Solutions</h3>
+                        <p>Designing data pipelines, ETL processes, and cloud solutions with Databricks and AWS.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="about-download">
+        <a href="/assets/Thembinkosi_Dladla_Journey.pdf" download="Thembinkosi_Dladla_Journey.pdf" class="btn-journey">
+            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download My Journey
+            <span class="btn-subtext">(PDF - Full Story)</span>
+        </a>
+    </div>
+</section>
+
+
+<!-- ===== HOBBIES SECTION ===== -->
+<!-- ===== TOGGLE SECTIONS ===== -->
+<section class="toggle-sections-wrapper" id="extras">
+    
+    <!-- Soft Skills -->
+    <div class="toggle-card">
+        <div class="toggle-card-header" onclick="toggleSection('softSkillsContent', this)">
+            <div class="toggle-card-left">
+                <span class="toggle-icon"></span>
+                <h3>My Soft Skills</h3>
+            </div>
+            <div class="toggle-card-right">
+                <span class="toggle-status">Show Soft Skills</span>
+                <span class="toggle-arrow">▼</span>
+            </div>
+        </div>
+        <div class="toggle-card-content" id="softSkillsContent">
+            <div class="soft-skills-grid">
+                <!-- Adaptability -->
+                <div class="soft-skill-card">
+                    <div class="soft-skill-icon"></div>
+                    <h4>Adaptability</h4>
+                    <blockquote>
+                        "The fast-paced nature of software development excites me. I'm quick to learn and embrace new tools, frameworks, and technologies, and I adapt easily to changing requirements or unexpected obstacles. This flexibility allows me to stay ahead and contribute meaningfully, no matter the situation."
+                    </blockquote>
+                    <div class="soft-skill-author">— Thembinkosi Dladla</div>
+                </div>
+
+                <!-- Problem Solving -->
+                <div class="soft-skill-card">
+                    <div class="soft-skill-icon"></div>
+                    <h4>Problem Solving</h4>
+                    <blockquote>
+                        "I genuinely enjoy tackling challenging problems. When faced with an issue, I break it down methodically, identify the root cause, and explore multiple solutions to find the most efficient one. This mindset has consistently helped me deliver high-quality results under tight deadlines."
+                    </blockquote>
+                    <div class="soft-skill-author">— Thembinkosi Dladla</div>
+                </div>
+
+                <!-- Teamwork -->
+                <div class="soft-skill-card">
+                    <div class="soft-skill-icon"></div>
+                    <h4>Teamwork</h4>
+                    <blockquote>
+                        "I thrive in collaborative environments. I'm always open to listening to different perspectives, offering constructive feedback, and supporting my team whenever needed. My ability to work well with others has helped foster strong, productive relationships in every team I've been part of."
+                    </blockquote>
+                    <div class="soft-skill-author">— Thembinkosi Dladla</div>
+                </div>
+
+                <!-- Communication -->
+                <div class="soft-skill-card">
+                    <div class="soft-skill-icon"></div>
+                    <h4>Communication</h4>
+                    <blockquote>
+                        "I pride myself on being able to explain complex technical concepts in simple terms. Whether I'm working with teammates, stakeholders, or clients, I ensure that everyone is on the same page, which has helped avoid miscommunication and keep projects running smoothly."
+                    </blockquote>
+                    <div class="soft-skill-author">— Thembinkosi Dladla</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hobbies Gallery -->
+    <div class="toggle-card">
+        <div class="toggle-card-header" onclick="toggleSection('hobbiesContent', this)">
+            <div class="toggle-card-left">
+                <span class="toggle-icon"></span>
+                <h3>My Hobbies and Social Activities Gallery</h3>
+            </div>
+            <div class="toggle-card-right">
+                <span class="toggle-status">Show Hobbies Gallery</span>
+                <span class="toggle-arrow">▼</span>
+            </div>
+        </div>
+        <div class="toggle-card-content" id="hobbiesContent">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/running.jpeg" alt="Running">
+                    <div class="gallery-caption"> Running</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/music.jpeg" alt="Music">
+                    <div class="gallery-caption"> Music</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/reading.jpeg" alt="Reading">
+                    <div class="gallery-caption">Reading</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/tech.jpeg" alt="Tech Events">
+                    <div class="gallery-caption">Tech Events</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/travel.jpeg" alt="Travel">
+                    <div class="gallery-caption">Hiking</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/hobbies/fitness.jpeg" alt="Fitness">
+                    <div class="gallery-caption">Fitness</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificates Gallery -->
+    <div class="toggle-card">
+        <div class="toggle-card-header" onclick="toggleSection('certificatesContent', this)">
+            <div class="toggle-card-left">
+                <span class="toggle-icon"></span>
+                <h3>My Certificates & Achievements Gallery</h3>
+            </div>
+            <div class="toggle-card-right">
+                <span class="toggle-status">Show Achievements Gallery</span>
+                <span class="toggle-arrow">▼</span>
+            </div>
+        </div>
+        <div class="toggle-card-content" id="certificatesContent">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-1.jpeg" alt="Certificate 1">
+                    <div class="gallery-caption"> Google Cybersecurity</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-2.jpeg" alt="Certificate 2">
+                    <div class="gallery-caption">Python for Data Science</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-3.jpeg" alt="Certificate 3">
+                    <div class="gallery-caption"> Artificial Intelligence</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-4.jpeg" alt="Certificate 4">
+                    <div class="gallery-caption"> Software Engineering</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-5.jpeg" alt="Certificate 5">
+                    <div class="gallery-caption"> Cloud Computing</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/certificates/cert-6.jpeg" alt="Certificate 6">
+                    <div class="gallery-caption">WeThinkCode_ GenAI Course for Software Engineers</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ===== EXPERIENCE & SKILLS SECTION ===== -->
+<section class="experience-container" id="experience">
+    <div class="experience-box">
+        <h2 class="section-title">Experience & Skills</h2>
+        <div class="experience-content">
+            
+            <div class="skills-column">
+                <h3 class="column-label"> Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><img src="assets/images/skills/csharp.png" alt="C#"></div>
+                        <p>C#</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><img src="assets/images/skills/python.png" alt="Python"></div>
+                        <p>Python</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><img src="assets/images/skills/java.png" alt="Java"></div>
+                        <p>Java</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><img src="assets/images/skills/js.png" alt="JavaScript"></div>
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><img src="assets/images/skills/react.png" alt="React"></div>
+                        <p>React.js</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><img src="assets/images/skills/node.png" alt="Node.js"></div>
+                        <p>Node.js</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><img src="assets/images/skills/sql.png" alt="SQL"></div>
+                        <p>SQL</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><img src="assets/images/skills/git.png" alt="Git"></div>
+                        <p>Git/GitHub</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><img src="assets/images/skills/powerbi.png" alt="Power BI"></div>
+                        <p>Power BI</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><img src="assets/images/skills/mongodb.png" alt="MongoDB"></div>
+                        <p>MongoDB</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><img src="assets/images/skills/databricks.png" alt="Databricks"></div>
+                        <p>Databricks</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-column">
+                <h3 class="column-label"> Work Experience</h3>
+                <div class="experience-timeline">
+                    <div class="experience-item current">
+                        <div class="experience-header">
+                            <h3>Data Structures (COMP201) Tutor</h3>
+                            <span class="company">University of KwaZulu-Natal</span>
+                            <span class="date">July 2026 - Current</span>
+                            <span class="badge">Current</span>
+                        </div>
+                        <ul class="experience-details">
+                            <li>Assisting students in understanding complex data structures and algorithms</li>
+                            <li>Conducting practical demonstrations and tutoring sessions</li>
+                            <li>Supporting students with hands-on programming exercises in Java</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Tax Data Automation Intern</h3>
+                            <span class="company">Naspers, Johannesburg</span>
+                            <span class="date">June 2025 - April 2026</span>
+                        </div>
+                        <ul class="experience-details">
+                            <li>Automated key tax processes using Google Apps Script, KNIME, and SQL on Databricks</li>
+                            <li>Developed and maintained ETL solutions for tax compliance</li>
+                            <li>Collaborated with tax professionals to identify automation opportunities</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Data Structures (COMP201) Tutor</h3>
+                            <span class="company">University of KwaZulu-Natal</span>
+                            <span class="date">Aug 2023 - Nov 2023</span>
+                        </div>
+                        <ul class="experience-details">
+                            <li>Helped second-level students master Data Structures concepts</li>
+                            <li>Demonstrated programming techniques and problem-solving strategies</li>
+                            <li>Provided one-on-one support and guided practical sessions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROJECTS SECTION ===== -->
+<section class="projects-container" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+        
+        <div class="project-card">
+            <div class="project-card-inner">
+                <div class="project-front">
+                    <h3 class="project-title">Movie Database</h3>
+                    <img src="assets/images/projects/movie-project.jpeg" alt="Movie Database" class="project-image">
+                    <div class="project-skills">
+                        <span class="project-skill">React.js</span>
+                        <span class="project-skill">Node.js</span>
+                        <span class="project-skill">MongoDB</span>
+                    </div>
+                </div>
+                <div class="project-back">
+                    <h3 class="project-title">Movie Database</h3>
+                    <p class="project-description">Full-stack app with external API integration.</p>
+                    <div class="project-links">
+                        <a href="https://movie-database-liart.vercel.app/" class="project-link" target="_blank">Demo</a>
+                        <a href="https://github.com/Stephan-23/movie-database" class="project-link" target="_blank">Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-card-inner">
+                <div class="project-front">
+                    <h3 class="project-title">Sales Tax Dashboard</h3>
+                    <img src="assets/images/projects/sales-tax-project.png" alt="Sales Tax Dashboard" class="project-image">
+                    <div class="project-skills">
+                        <span class="project-skill">Python</span>
+                        <span class="project-skill">Power BI</span>
+                        <span class="project-skill">DAX</span>
+                    </div>
+                </div>
+                <div class="project-back">
+                    <h3 class="project-title">Sales Tax Dashboard</h3>
+                    <p class="project-description">Interactive dashboard for sales tax analysis.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank">Demo</a>
+                        <a href="#" class="project-link" target="_blank">Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-card-inner">
+                <div class="project-front">
+                    <h3 class="project-title">Cylinder Head Doctor API</h3>
+                    <img src="assets/images/projects/api-project.png" alt="API" class="project-image">
+                    <div class="project-skills">
+                        <span class="project-skill">C#</span>
+                        <span class="project-skill">ASP.NET Core</span>
+                        <span class="project-skill">SQL Server</span>
+                    </div>
+                </div>
+                <div class="project-back">
+                    <h3 class="project-title">Cylinder Head Doctor API</h3>
+                    <p class="project-description">Web API for managing customer data and payments.</p>
+                    <div class="project-links">
+                        <a href="https://vt.tiktok.com/ZS42HteoU/" class="project-link" target="_blank">Demo</a>
+                        <a href="https://github.com/Stephan-23/CylinderHeadDoctorAPI" class="project-link" target="_blank">Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-card-inner">
+                <div class="project-front">
+                    <h3 class="project-title">SA-ID Testing WebApp</h3>
+                    <img src="assets/images/projects/sa-id-project.jpeg" alt="SA-ID" class="project-image">
+                    <div class="project-skills">
+                        <span class="project-skill">JavaScript</span>
+                        <span class="project-skill">Node.js</span>
+                        <span class="project-skill">MongoDB</span>
+                    </div>
+                </div>
+                <div class="project-back">
+                    <h3 class="project-title">SA-ID Testing WebApp</h3>
+                    <p class="project-description">98% accurate South African ID validation tool.</p>
+                    <div class="project-links">
+                        <a href="https://sa-id-testing-webapp.onrender.com/" class="project-link" target="_blank">Demo</a>
+                        <a href="https://github.com/Stephan-23/SA_ID_TESTING_WEBAPP" class="project-link" target="_blank">Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact-container" id="contact">
+    <div class="contact-wrapper">
+        
+        <!-- Greeting at Top -->
+        <div class="contact-greeting-wrapper">
+            <p class="contact-greeting">Nice to meet you, I'm Thembinkosi</p>
+        </div>
+        
+        <!-- Two Column Grid -->
+        <div class="contact-grid">
+            
+            <!-- Left Column - Social Links -->
+            <div class="contact-socials">
+                <h3 class="contact-social-title"> Connect with me</h3>
+                
+                <div class="social-links-list">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/thembinkosi-stephan-dladla/" target="_blank" rel="noopener noreferrer" class="social-link-item">
+                        <div class="social-link-icon">
+                            <img src="assets/images/contact/linkedin-icon.png" alt="LinkedIn">
+                        </div>
+                        <div class="social-link-info">
+                            <span class="social-link-label">LinkedIn</span>
+                            <span class="social-link-handle">@thembinkosi-stephan-dladla</span>
+                        </div>
+                        <span class="social-link-arrow">→</span>
                     </a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    
+                    <!-- GitHub -->
+                    <a href="https://github.com/Stephan-23" target="_blank" rel="noopener noreferrer" class="social-link-item">
+                        <div class="social-link-icon">
+                            <img src="assets/images/contact/github-icon.png" alt="GitHub">
+                        </div>
+                        <div class="social-link-info">
+                            <span class="social-link-label">GitHub</span>
+                            <span class="social-link-handle">@Stephan-23</span>
+                        </div>
+                        <span class="social-link-arrow">→</span>
+                    </a>
+ 
+                    <!-- Email -->
+                    <a href="mailto:dladlathembinkosi75@gmail.com" class="social-link-item">
+                        <div class="social-link-icon">
+                            <img src="assets/images/contact/email.png" alt="Email">
+                        </div>
+                        <div class="social-link-info">
+                            <span class="social-link-label">Email</span>
+                            <span class="social-link-handle">dladlathembinkosi75@gmail.com</span>
+                        </div>
+                        <span class="social-link-arrow">→</span>
+                    </a>
+                    
+                    <!-- Phone -->
+                    <a href="#" onclick="copyToClipboard('+27 73 419 4031', 'Phone')" class="social-link-item">
+                        <div class="social-link-icon">
+                            <img src="assets/images/contact/phone.png" alt="Phone">
+                        </div>
+                        <div class="social-link-info">
+                            <span class="social-link-label">Phone</span>
+                            <span class="social-link-handle">+27 73 419 4031</span>
+                        </div>
+                        <span class="social-link-arrow">→</span>
+                    </a>
+                                        <!-- X (Twitter) -->
+                    <a href="https://www.instagram.com/dladlastephan?igsh=MW5oZmE2cWdyMWc1cg==" class="social-link-item">
+                        <div class="social-link-icon">
+                            <img src="assets/images/contact/instagram-icon.jpg" alt="Instagram (Instagram)">
+                        </div>
+                        <div class="social-link-info">
+                            <span class="social-link-label">Instagram (Instagram)</span>
+                            <span class="social-link-handle">@dladlastephan</span>
+                        </div>
+                        <span class="social-link-arrow">→</span>
+                    </a>
+                                        <!-- X (Twitter) -->
+                    <a href="#" class="social-link-item">
+                        <div class="social-link-icon">
+                            <img src="assets/images/contact/x-icon.png" alt="X (Twitter)">
+                        </div>
+                        <div class="social-link-info">
+                            <span class="social-link-label">X (Twitter)</span>
+                            <span class="social-link-handle">@thembinkosi_d</span>
+                        </div>
+                        <span class="social-link-arrow">→</span>
+                    </a>
+                </div>
+                
+                <!-- Location -->
+                <div class="contact-location-block">
+                    <span></span>
+                    <span>Durban, South Africa</span>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="profile-placeholder">
-                    <i class="fas fa-user-circle"></i>
+            
+            <!-- Right Column - Profile Photos (Rotating) -->
+            <div class="contact-photos">
+                <div class="photo-stack" id="photoStack">
+                    <img src="assets/images/contact/profile-1.jpeg" alt="Thembinkosi Dladla 1" class="photo active" data-index="0">
+                    <img src="assets/images/contact/profile-2.png" alt="Thembinkosi Dladla 2" class="photo" data-index="1">
+                    <img src="assets/images/contact/profile-3.jpeg" alt="Thembinkosi Dladla 3" class="photo" data-index="2">
+                    <img src="assets/images/contact/profile-4.jpeg" alt="Thembinkosi Dladla 4" class="photo" data-index="3">
+                    <img src="assets/images/contact/profile-5.jpeg" alt="Thembinkosi Dladla 5" class="photo" data-index="4">
+                    <img src="assets/images/contact/profile-6.jpeg" alt="Thembinkosi Dladla 6" class="photo" data-index="5">
+                    <img src="assets/images/contact/profile-7.jpeg" alt="Thembinkosi Dladla 7" class="photo" data-index="6">
+                    
+                    <!-- Navigation Arrows -->
+                    <button class="photo-nav photo-nav-prev" id="prevPhoto" aria-label="Previous photo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"/>
+                        </svg>
+                    </button>
+                    <button class="photo-nav photo-nav-next" id="nextPhoto" aria-label="Next photo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Photo Indicators -->
+                    <div class="photo-indicators">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                    </div>
                 </div>
             </div>
+            
         </div>
-    </section>
+        
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Thembinkosi Dladla. All rights reserved.</p>
+    </div>
+</section>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
-</body>
+<!-- Contact Modal -->
+<div class="modal-overlay" id="contactModal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <div class="modal-buttons">
+                <button type="button" class="btn-back" id="modalBack">Back</button>
+                <button type="submit" class="btn-send">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/script.js"></script></body>
 </html>
+

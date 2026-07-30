@@ -1,0 +1,553 @@
+/* ===== Toggle Sections ===== */
+.toggle-section {
+    padding: 60px 10%;
+    background: var(--color-bg);
+}
+
+.toggle-section:nth-child(even) {
+    background: var(--color-secondary);
+}
+
+.toggle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.toggle-header .section-title {
+    margin-bottom: 0;
+    font-size: 32px;
+}
+
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 30px;
+    background: var(--color-bt);
+    color: var(--color-dark);
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(249, 188, 96, 0.3);
+}
+
+.toggle-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(249, 188, 96, 0.5);
+}
+
+.toggle-btn .btn-icon {
+    transition: transform 0.3s ease;
+    font-size: 14px;
+}
+
+.toggle-btn.active .btn-icon {
+    transform: rotate(180deg);
+}
+
+.toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+    opacity: 0;
+}
+
+.toggle-content.open {
+    max-height: 5000px;
+    opacity: 1;
+}
+
+/* ===== Soft Skills Grid ===== */
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.soft-skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.soft-skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-bt);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.soft-skill-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.soft-skill-card h3 {
+    font-size: 24px;
+    color: var(--color-bt);
+    margin-bottom: 15px;
+}
+
+.soft-skill-card blockquote {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    quotes: none;
+}
+
+.soft-skill-card blockquote::before {
+    content: '"';
+    color: var(--color-bt);
+    font-size: 24px;
+}
+
+.soft-skill-card blockquote::after {
+    content: '"';
+    color: var(--color-bt);
+    font-size: 24px;
+}
+
+.soft-skill-author {
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    text-align: right;
+}
+
+/* ===== Gallery Grid ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    border-color: var(--color-bt);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+    .soft-skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .toggle-section {
+        padding: 40px 5%;
+    }
+    
+    .toggle-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .toggle-header .section-title {
+        font-size: 24px;
+    }
+    
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .toggle-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .soft-skill-card {
+        padding: 20px;
+    }
+    
+    .soft-skill-card blockquote {
+        font-size: 14px;
+    }
+}
+
+
+/* ===== Toggle Sections Wrapper ===== */
+.toggle-sections-wrapper {
+    padding: 40px 10% 60px;
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== Toggle Card ===== */
+.toggle-card {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.toggle-card:hover {
+    border-color: rgba(249, 188, 96, 0.2);
+}
+
+/* ===== Card Header ===== */
+.toggle-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.toggle-card-header:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.toggle-card-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.toggle-icon {
+    font-size: 28px;
+}
+
+.toggle-card-left h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.toggle-card-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.toggle-status {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-bt);
+    padding: 6px 16px;
+    background: rgba(249, 188, 96, 0.1);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.toggle-card-header:hover .toggle-status {
+    background: rgba(249, 188, 96, 0.2);
+}
+
+.toggle-arrow {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.toggle-card-header.active .toggle-arrow {
+    transform: rotate(180deg);
+}
+
+.toggle-card-header.active .toggle-status {
+    background: rgba(249, 188, 96, 0.2);
+    color: var(--color-bt);
+}
+
+/* ===== Card Content ===== */
+.toggle-card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+    opacity: 0;
+    padding: 0 28px;
+}
+
+.toggle-card-content.open {
+    max-height: 5000px;
+    opacity: 1;
+    padding: 0 28px 30px;
+}
+
+/* ===== Soft Skills Grid ===== */
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding-top: 10px;
+}
+
+.soft-skill-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.soft-skill-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(249, 188, 96, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.soft-skill-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.soft-skill-card h4 {
+    font-size: 20px;
+    color: var(--color-bt);
+    margin-bottom: 12px;
+}
+
+.soft-skill-card blockquote {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    margin: 0;
+}
+
+.soft-skill-card blockquote::before {
+    content: '"';
+    color: var(--color-bt);
+    font-size: 20px;
+}
+
+.soft-skill-card blockquote::after {
+    content: '"';
+    color: var(--color-bt);
+    font-size: 20px;
+}
+
+.soft-skill-author {
+    margin-top: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+    text-align: right;
+}
+
+/* ===== Gallery Grid ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    border-color: var(--color-bt);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 18px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+    .toggle-sections-wrapper {
+        padding: 30px 5% 50px;
+    }
+    
+    .soft-skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .toggle-card-header {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .toggle-card-left h3 {
+        font-size: 17px;
+    }
+    
+    .toggle-icon {
+        font-size: 24px;
+    }
+    
+    .toggle-status {
+        font-size: 12px;
+        padding: 4px 14px;
+    }
+    
+    .toggle-card-content.open {
+        padding: 0 20px 20px;
+    }
+    
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+    
+    .soft-skill-card {
+        padding: 20px;
+    }
+    
+    .soft-skill-card blockquote {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .toggle-sections-wrapper {
+        padding: 20px 4% 40px;
+        gap: 14px;
+    }
+    
+    .toggle-card-header {
+        padding: 14px 16px;
+    }
+    
+    .toggle-card-left h3 {
+        font-size: 15px;
+    }
+    
+    .toggle-icon {
+        font-size: 20px;
+    }
+    
+    .toggle-status {
+        font-size: 11px;
+        padding: 3px 10px;
+    }
+    
+    .toggle-arrow {
+        font-size: 14px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .toggle-card-content.open {
+        padding: 0 16px 16px;
+    }
+    
+    .soft-skill-card blockquote {
+        font-size: 13px;
+    }
+}
