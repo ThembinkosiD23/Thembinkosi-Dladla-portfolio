@@ -62,6 +62,7 @@
     </section>
 
 <!-- ===== ABOUT SECTION ===== -->
+<!-- ===== ABOUT SECTION ===== -->
 <section class="about-container" id="about">
     <h2 class="section-title">About Me</h2>
     
@@ -72,74 +73,91 @@
         </p>
     </div>
 
-    <div class="about-content">
-        <!-- Skills Cards -->
-        <ul class="about-items">
-            <li class="about-item">
-                <img 
-                    src="assets/images/about/front.png" 
-                    alt="Frontend Development" 
-                    class="about-icon"
-                >
-                <div class="about-text">
-                    <h3>Frontend Development</h3>
-                    <p>Building responsive and interactive user interfaces with React, HTML, CSS, and JavaScript.</p>
+    <!-- ===== TWO-COLUMN GRID ===== -->
+    <div class="about-grid">
+        
+        <!-- LEFT COLUMN: Education -->
+        <div class="about-left">
+            <h3 class="education-title">🎓 Education</h3>
+            
+            <div class="education-list">
+                <!-- Honours -->
+                <div class="education-item">
+                    <div class="edu-logo">
+                        <img src="assets/images/about/ukzn.jpeg" alt="UKZN Logo">
+                    </div>
+                    <div class="edu-info">
+                        <h4>BCom (Honours) in Information Systems and Technology</h4>
+                        <p class="edu-institution">University of KwaZulu-Natal</p>
+                        <p class="edu-date">In Progress</p>
+                    </div>
                 </div>
-            </li>
-            <li class="about-item">
-                <img 
-                    src="assets/images/about/backend.png" 
-                    alt="Backend Development" 
-                    class="about-icon"
-                >
-                <div class="about-text">
-                    <h3>Backend Development</h3>
-                    <p>Creating robust APIs and server-side applications with C#, ASP.NET Core, Node.js, and Python.</p>
-                </div>
-            </li>
-            <li class="about-item">
-                <img 
-                    src="assets/images/about/other.png" 
-                    alt="Other Skills" 
-                    class="about-icon"
-                >
-                <div class="about-text">
-                    <h3>Data & Cloud Solutions</h3>
-                    <p>Designing data pipelines, ETL processes, and cloud-based solutions with Databricks and AWS.</p>
-                </div>
-            </li>
-        </ul>
-    </div>
 
-    <!-- ===== EDUCATION SECTION ===== -->
-    <div class="education-section">
-        <h3 class="education-title">🎓 Education</h3>
-        <div class="education-grid">
-            <div class="education-item">
-                <div class="education-icon">📘</div>
-                <div class="education-info">
-                    <h4>BCom (Honours) in Information Systems and Technology</h4>
-                    <p class="edu-institution">University of KwaZulu-Natal</p>
-                    <p class="edu-date">In Progress</p>
+                <!-- BSc -->
+                <div class="education-item">
+                    <div class="edu-logo">
+                        <img src="assets/images/about/ukzn.jpeg.png" alt="UKZN Logo">
+                    </div>
+                    <div class="edu-info">
+                        <h4>BSc in Computer Science and Information Technology</h4>
+                        <p class="edu-institution">University of KwaZulu-Natal</p>
+                        <p class="edu-date">2019 - 2023</p>
+                    </div>
                 </div>
-            </div>
-            <div class="education-item">
-                <div class="education-icon">🎓</div>
-                <div class="education-info">
-                    <h4>BSc in Computer Science and Information Technology</h4>
-                    <p class="edu-institution">University of KwaZulu-Natal</p>
-                    <p class="edu-date">2019 - 2023</p>
-                </div>
-            </div>
-            <div class="education-item">
-                <div class="education-icon">🏫</div>
-                <div class="education-info">
-                    <h4>Mashingizela High School</h4>
-                    <p class="edu-institution">National Senior Certificate</p>
-                    <p class="edu-date">2014 - 2018</p>
+
+                <!-- High School -->
+                <div class="education-item">
+                    <div class="edu-logo">
+                        <img src="assets/images/about/school-logo.png" alt="School Logo" size="100">
+                    </div>
+                    <div class="edu-info">
+                        <h4>Mashingizela High School</h4>
+                        <p class="edu-institution">National Senior Certificate</p>
+                        <p class="edu-date">2014 - 2018</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- RIGHT COLUMN: Skills Cards -->
+        <div class="about-right">
+            <ul class="about-items">
+                <li class="about-item">
+                    <img 
+                        src="assets/images/about/front.png" 
+                        alt="Frontend Development" 
+                        class="about-icon"
+                    >
+                    <div class="about-text">
+                        <h3>Frontend Development</h3>
+                        <p>Building responsive and interactive user interfaces with React, HTML, CSS, and JavaScript.</p>
+                    </div>
+                </li>
+                <li class="about-item">
+                    <img 
+                        src="assets/images/about/back.png" 
+                        alt="Backend Development" 
+                        class="about-icon"
+                    >
+                    <div class="about-text">
+                        <h3>Backend Development</h3>
+                        <p>Creating robust APIs and server-side applications with C#, ASP.NET Core, Node.js, and Python.</p>
+                    </div>
+                </li>
+                <li class="about-item">
+                    <img 
+                        src="assets/images/about/other.png" 
+                        alt="Other Skills" 
+                        class="about-icon"
+                    >
+                    <div class="about-text">
+                        <h3>Data & Cloud Solutions</h3>
+                        <p>Designing data pipelines, ETL processes, and cloud-based solutions with Databricks.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
     </div>
     
     <!-- Download Journey Button -->

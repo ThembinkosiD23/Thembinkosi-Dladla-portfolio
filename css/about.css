@@ -20,29 +20,141 @@
     text-align: center;
 }
 
-.about-content {
+/* ===== About Summary ===== */
+.about-summary {
+    margin-bottom: 50px;
+}
+
+.about-bio {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-text);
+    opacity: 0.9;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* ===== TWO-COLUMN GRID ===== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== LEFT COLUMN - Education ===== */
+.about-left {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 30px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.about-left:hover {
+    border-color: var(--color-bt);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.education-title {
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.education-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.education-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(249, 188, 96, 0.3);
+    transform: translateX(5px);
+}
+
+.edu-logo {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.edu-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.edu-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 3px;
+    line-height: 1.3;
+}
+
+.edu-info .edu-institution {
+    font-size: 14px;
+    color: var(--color-bt);
+    font-weight: 500;
+}
+
+.edu-info .edu-date {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 2px;
+}
+
+/* ===== RIGHT COLUMN - Skills Cards ===== */
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .about-items {
     color: var(--color-text);
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    width: 100%;
-    max-width: 900px;
+    gap: 25px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .about-item {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-radius: 20px;
-    padding: 25px;
+    border-radius: 16px;
+    padding: 22px 28px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     background-image: linear-gradient(
         90deg,
         rgba(165, 215, 232, 0.42) 0%,
@@ -50,7 +162,7 @@
     );
     background-size: 0 100%;
     background-repeat: no-repeat;
-    transition: 0.4s ease;
+    transition: all 0.4s ease;
     opacity: 0;
     transform: translateX(100%);
 }
@@ -74,6 +186,9 @@
 
 .about-item:hover {
     background-size: 100% 100%;
+    border-color: rgba(249, 188, 96, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Hover effect on title */
@@ -82,24 +197,25 @@
 }
 
 .about-icon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
-    margin-right: 25px;
+    margin-right: 22px;
     flex-shrink: 0;
 }
 
 .about-text h3 {
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     transition: color 0.3s ease;
 }
 
 .about-text p {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.6;
-    opacity: 0.9;
+    opacity: 0.85;
+    margin: 0;
 }
 
 /* ===== Download Journey Button ===== */
@@ -175,6 +291,13 @@
 }
 
 /* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 35px;
+    }
+}
+
 @media screen and (max-width: 830px) {
     .about-container {
         background-color: transparent;
@@ -184,8 +307,38 @@
         margin-top: 40px;
     }
 
-    .about-items {
-        gap: 30px;
+    .about-bio {
+        font-size: 17px;
+        padding: 0 10px;
+    }
+
+    /* Stack columns on mobile */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Education left column becomes top */
+    .about-left {
+        order: 1;
+        padding: 25px 20px;
+    }
+
+    .about-right {
+        order: 2;
+    }
+
+    .education-item {
+        padding: 14px 16px;
+    }
+
+    .edu-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .edu-info h4 {
+        font-size: 14px;
     }
 
     .about-item {
@@ -204,18 +357,19 @@
     .about-icon {
         margin-right: 0;
         margin-bottom: 15px;
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
     }
 
     .about-text h3 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .about-text p {
-        font-size: 18px;
+        font-size: 16px;
     }
 
+    /* Button responsive */
     .btn-journey {
         padding: 15px 25px;
         font-size: 18px;
@@ -241,12 +395,32 @@
         font-size: 28px;
     }
 
-    .about-text h3 {
+    .about-bio {
+        font-size: 15px;
+    }
+
+    .education-title {
         font-size: 20px;
     }
 
+    .edu-info h4 {
+        font-size: 13px;
+    }
+
+    .edu-info .edu-institution {
+        font-size: 12px;
+    }
+
+    .edu-info .edu-date {
+        font-size: 11px;
+    }
+
+    .about-text h3 {
+        font-size: 18px;
+    }
+
     .about-text p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .btn-journey {
