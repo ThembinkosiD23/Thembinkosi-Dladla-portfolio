@@ -127,19 +127,3 @@ const aboutObserver = new IntersectionObserver((entries) => {
     rootMargin: '0px 0px -50px 0px'
 });
 
-// Observe about items
-document.querySelectorAll('.about-item').forEach(item => {
-    aboutObserver.observe(item);
-});
-
-const skillItems = document.querySelectorAll(".skill-item");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
-    });
-});
-
-skillItems.forEach(item => observer.observe(item));
