@@ -312,3 +312,31 @@ document.addEventListener('DOMContentLoaded', function() {
     window.nextPhoto = nextPhoto;
     window.prevPhoto = prevPhoto;
 });
+
+// ============================================
+// TOGGLE SECTIONS - Show/Hide
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+    
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const content = document.getElementById(targetId);
+            const btnText = this.querySelector('.btn-text');
+            const isOpen = content.classList.contains('open');
+            
+            if (isOpen) {
+                // Close
+                content.classList.remove('open');
+                this.classList.remove('active');
+                btnText.textContent = btnText.textContent.replace('Hide', 'Show');
+            } else {
+                // Open
+                content.classList.add('open');
+                this.classList.add('active');
+                btnText.textContent = btnText.textContent.replace('Show', 'Hide');
+            }
+        });
+    });
+});
