@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Tech Trends 2026 - Thembinkosi Dladla</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #0a0a0f;
+            min-height: 100vh;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .header .back-link {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .header .back-link:hover {
+            color: #bac964;
+        }
+
+        .header .badge {
+            background: rgba(186, 201, 100, 0.1);
+            color: #bac964;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        h1 .highlight {
+            color: #bac964;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.06);
+            margin: 30px 0;
+        }
+
+        /* Trend Sections */
+        .trend-section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .trend-section:hover {
+            border-color: rgba(186, 201, 100, 0.15);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .trend-section .trend-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .trend-section .trend-number {
+            background: rgba(186, 201, 100, 0.1);
+            color: #bac964;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+            border: 1px solid rgba(186, 201, 100, 0.2);
+        }
+
+        .trend-section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .trend-section .trend-badge {
+            display: inline-block;
+            padding: 3px 14px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 400;
+            margin-left: 8px;
+        }
+
+        .trend-section .trend-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 15px 0 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .trend-section p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .trend-section .source {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 13px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            margin-top: 15px;
+        }
+
+        .trend-section .source a {
+            color: #bac964;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .trend-section .source a:hover {
+            color: #d0e070;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+            
+            .trend-section {
+                padding: 25px 20px;
+            }
+            
+            .trend-section h2 {
+                font-size: 18px;
+            }
+            
+            .trend-section .trend-image {
+                max-height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 22px;
+            }
+            
+            .trend-section {
+                padding: 20px 15px;
+            }
+            
+            .trend-section p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <a href="dashboard.html" class="back-link">← Dashboard</a>
+            <span class="badge">Activity 3</span>
+        </div>
+
+        <h1>My Top <span class="highlight">5 Technology Trends</span></h1>
+        <p class="subtitle">Thembinkosi Dladla · 219072513</p>
+
+        <div class="divider"></div>
+
+        <!-- Trend 1: Confidential Computing -->
+        <div class="trend-section">
+            <div class="trend-header">
+                <span class="trend-number">1</span>
+                <h2>Confidential Computing <span class="trend-badge">Hardware-Level Security</span></h2>
+            </div>
+            <img src="https://cloudrps.com/images/blog/confidential-computing-tee-explained/hero.png" alt="Confidential Computing - Data Security" class="trend-image">
+            <p><strong>Why it matters:</strong> While everyone is focused on AI models, they often forget that data is most vulnerable while it is being processed. Standard/Traditional encryption acts like a lock on a safe for data that is sitting in storage or moving across the network. This is where confidential computing steps in. Confidential Computing uses hardware-based Trusted Execution Environments (TEEs) to keep data encrypted even while the CPU is processing it. I have dealt with highly sensitive financial data. To use AI or cloud processing on this data without risking a breach, Confidential Computing is the only viable solution.</p>
+            <p>Industry analysts are forecasting that by the end of this decade, roughly three-quarters of all data processing happening on networks we don't fully control will rely on this Confidential Computing.</p>
+            <div class="source"><strong>Source:</strong> <a href="https://www.gartner.com/en/newsroom/press-releases/2025-10-20-gartner-identifies-the-top-strategic-technology-trends-for-2026" target="_blank">Gartner Top Strategic Technology Trends 2026</a></div>
+        </div>
+
+        <!-- Trend 2: AI Security Platforms -->
+        <div class="trend-section">
+            <div class="trend-header">
+                <span class="trend-number">2</span>
+                <h2>AI Security Platforms <span class="trend-badge">AISPs</span></h2>
+            </div>
+            <img src="https://bigid.com/wp-content/uploads/2026/01/AI-Security-Platform-Capabilities-AISP-1024x683.webp" alt="AI Security Platforms" class="trend-image">
+            <p>As companies rapidly adopt GenAI, they are creating new attack surfaces like prompt injection and rogue agents. AI Security Platforms aren't just firewalls; they are centralized hubs that monitor AI usage, inventory AI models, and prevent internal policy violations.</p>
+            <p>A huge blind spot for modern companies is tracking the conversations happening between their own AI tools and internal databases. My time handling sensitive financial data taught me that oversight is everything. Current research highlights that by 2028, most unauthorized AI data access won't even be an outside hacker, it will actually be employees accidentally breaking their own internal rules. This makes specialized AI governance tools necessary.</p>
+            <div class="source"><strong>Sources:</strong> <a href="https://youtu.be/5dgpcQXq1eo" target="_blank">Gartner's Top 10 Tech Trends 2026</a> · <a href="https://www.linkedin.com/posts/gartnermgv4linkedin45-share-7325670734486233088-HoUW/" target="_blank">LinkedIn Post</a></div>
+        </div>
+
+        <!-- Trend 3: Multi-Agent Systems -->
+        <div class="trend-section">
+            <div class="trend-header">
+                <span class="trend-number">3</span>
+                <h2>Multi-Agent Systems <span class="trend-badge">MAS</span></h2>
+            </div>
+            <img src="https://visionx.io/wp-content/uploads/2025/05/Multi-Agent-System-scaled.jpg" alt="Multi-Agent Systems - AI Collaboration" class="trend-image">
+            <p>Multi-Agent Systems (MAS) are becoming an important development in AI because they allow several specialised agents to work together instead of depending on one AI system to complete an entire task. Each agent can be given a specific responsibility, such as collecting data, analysing information, checking results, or producing a final report. Research by Guo et al. (2024) shows that LLM-based multi-agent systems can use collaboration and communication between agents to address more complex tasks than a single-agent approach. This is particularly useful when a problem requires different types of reasoning or several stages of processing. Rather than replacing existing AI systems, MAS can therefore provide a way of coordinating different capabilities within one workflow. Gartner also identifies multi-agent systems as an emerging enterprise technology, particularly because specialised agents can cooperate across complex business processes. This suggests that MAS could move beyond experimental AI applications and become part of larger organisational systems.</p>
+            <p><strong>Potential use in Big Data:</strong> MAS has significant potential in Big Data because large datasets often require several stages of collection, processing, validation and analysis. For example, a financial organisation could use different agents to collect financial information, clean and validate the data, identify unusual transactions and produce a security or compliance report. Li et al. (2024) highlight the importance of different workflows, communication mechanisms and coordination within LLM-based multi-agent systems, supporting the idea that specialised agents can be organised around different stages of a complex task. Gartner further identifies standards-based interoperability as an important requirement for enterprise-scale multi-agent systems, which could allow agents developed using different technologies to work together. However, MAS also introduces challenges, including coordination, communication and reliability, meaning that human oversight and appropriate governance may still be required.</p>
+            <div class="source"><strong>Sources:</strong> <a href="https://www.ijcai.org/proceedings/2024/890" target="_blank">IJCAI 2024</a> · <a href="https://www.gartner.com/en/articles/multiagent-systems" target="_blank">Gartner</a> · <a href="https://doi.org/10.1007/s44336-024-00009-2" target="_blank">DOI: 10.1007/s44336-024-00009-2</a></div>
+        </div>
+
+        <!-- Trend 4: Digital Provenance -->
+        <div class="trend-section">
+            <div class="trend-header">
+                <span class="trend-number">4</span>
+                <h2>Digital Provenance</h2>
+            </div>
+            <img src="https://th.bing.com/th/id/OIP.YRjGLqnXia2fm3yVKXXMfAAAAA?w=280&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Digital Provenance - Blockchain Verification" class="trend-image">
+            <p>With deepfakes and AI-generated media becoming indistinguishable from reality, how do we trust what we see? Digital provenance uses cryptographic tools (like watermarks and Bills of Materials) to track the origin and integrity of a piece of software, data, or media.</p>
+            <p>This is critical for financial reporting and legal evidence. With AI now generating reports and documents at lightning speed, we face a serious new challenge: how do we prove what is authentic and what has been subtly altered? Digital provenance solves this by using cryptographic tools, like embedded watermarks, to give us a trusted chain of custody.</p>
+            <p>Regulatory mandates are forcing this. The EU AI Act specifically requires watermarking and provenance tracking for AI-generated content.</p>
+            <div class="source"><strong>Source:</strong> <a href="https://www2.deloitte.com/us/en/insights/focus/tech-trends.html" target="_blank">Deloitte Tech Trends</a></div>
+        </div>
+
+        <!-- Trend 5: Geopatriation -->
+        <div class="trend-section">
+            <div class="trend-header">
+                <span class="trend-number">5</span>
+                <h2>Geopatriation</h2>
+            </div>
+            <img src="https://th.bing.com/th/id/OIP.82kY2gN1gH3020nYLGpI_QHaEJ?w=285&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Geopatriation - Global Data Centers" class="trend-image">
+            <p>This is the quiet trend that will shape global infrastructure. Due to political tensions, countries are demanding that their data stays within their borders. Geopatriation is the strategic movement of workloads away from global hyperscale cloud providers and into local or sovereign environments. Gartner identifies geopatriation as one of its key strategic technology trends for 2026, highlighting the growing importance of reducing geopolitical risks associated with global cloud infrastructure (Gartner, 2025).</p>
+            <p>For South African organisations, this trend is particularly relevant because of the requirements surrounding the protection and transfer of personal information. POPIA does not simply require all personal information to remain within South Africa, but Section 72 places conditions on transferring personal information to countries outside the Republic (Republic of South Africa, 2013). Organisations therefore need to consider whether using international cloud providers provides sufficient protection while also weighing issues such as compliance, data control, cost and geopolitical risk.</p>
+            <p>Gartner over the next 3-5, geopatriation could become increasingly relevant as organisations reassess their dependence on international cloud providers. Local data centres and sovereign cloud services may provide greater control over sensitive information, although they can also involve higher costs and fewer available services. For South African businesses, the challenge will be finding a practical balance between the benefits of global cloud services and the growing need for data sovereignty, regulatory compliance and resilience (Gartner, 2025).</p>
+            <div class="source"><strong>Sources:</strong> <a href="https://www.gartner.com/en/documents/7079998" target="_blank">Gartner 2025</a> · <a href="https://www.justice.gov.za/legislation/acts/2013-004.pdf" target="_blank">POPIA Act 4 of 2013</a></div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Thembinkosi Dladla · Academic Use Only</p>
+        </div>
+    </div>
+
+    <script>
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

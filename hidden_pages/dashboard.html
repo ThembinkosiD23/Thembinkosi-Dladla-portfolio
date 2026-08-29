@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hidden Academic Pages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #0a0a0f;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .dashboard-header h1 {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .dashboard-header h1 span {
+            color: #bac964;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-info .user-badge {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 16px;
+            border-radius: 50px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .logout-btn {
+            background: rgba(255, 50, 50, 0.1);
+            color: #ff6b6b;
+            border: 1px solid rgba(255, 50, 50, 0.15);
+            padding: 8px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255, 50, 50, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .page-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .page-card {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #bac964, #d0e070);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .page-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(186, 201, 100, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-card:hover::before {
+            opacity: 1;
+        }
+
+        .page-card .card-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .page-card h3 {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .page-card p {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .page-card .card-status {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 50px;
+            background: rgba(186, 201, 100, 0.1);
+            color: #bac964;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .back-link:hover {
+            color: #bac964;
+        }
+
+        .back-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .hidden-note {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 480px) {
+            .dashboard-header h1 {
+                font-size: 22px;
+            }
+            
+            .page-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Hidden <span>Academic Pages</span></h1>
+            <div class="user-info">
+                <span class="user-badge"><span id="usernameDisplay"></span></span>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+        <div class="page-grid">
+            <!-- Page 1: Top Tech Trends -->
+            <a href="top-tech-trends.html" class="page-card">
+                <span class="card-icon"></span>
+                <h3>Top Tech Trends 2026</h3>
+                <p>My top 5 technology trends for 2026.</p>
+                <span class="card-status">Activity 3</span>
+            </a>
+
+            <!-- Page 2: Dark Side -->
+            <a href="dark-side.html" class="page-card">
+                <span class="card-icon"></span>
+                <h3>The Dark Side</h3>
+                <p>Negative applications of technology trends from global and local perspectives.</p>
+                <span class="card-status">Activity 4</span>
+            </a>
+
+            <!-- Page 3: Pre-assessment -->
+            <a href="pre-assessment.html" class="page-card">
+                <span class="card-icon"></span>
+                <h3>Pre-assessment</h3>
+                <p>Pre-assessment preparation</p>
+                <span class="card-status">Assessment Prep</span>
+            </a>
+        </div>
+
+        <a href="../index.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Main Portfolio
+        </a>
+
+        <div class="hidden-note">
+             These pages are for academic purposes only
+        </div>
+    </div>
+
+    <script>
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+            window.location.href = 'login.html';
+        }
+
+        const username = sessionStorage.getItem('username') || 'User';
+        document.getElementById('usernameDisplay').textContent = username;
+
+        function logout() {
+            sessionStorage.clear();
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+/* ===== Vodcast Section ===== */
+.vodcast-section {
+    padding: 60px 10%;
+    background: var(--color-bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.vodcast-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vodcast-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: -20px auto 40px auto;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.vodcast-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ===== Video Player ===== */
+.vodcast-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.vodcast-video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ===== Video Info ===== */
+.vodcast-info {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.vodcast-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.vodcast-info .vodcast-desc {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.vodcast-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    margin-bottom: 20px;
+}
+
+.vodcast-meta span {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+}
+
+.vodcast-meta span strong {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.vodcast-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.vodcast-tags .tag {
+    padding: 5px 14px;
+    background: rgba(186, 201, 100, 0.08);
+    border: 1px solid rgba(186, 201, 100, 0.1);
+    border-radius: 50px;
+    font-size: 12px;
+    color: #bac964;
+    font-weight: 500;
+}
+
+/* ===== Hidden Pages Link ===== */
+.vodcast-hidden-link {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.vodcast-hidden-link .hidden-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 32px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.vodcast-hidden-link .hidden-link-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(186, 201, 100, 0.3);
+    color: #bac964;
+    transform: translateY(-2px);
+}
+
+.vodcast-hidden-link .hidden-link-btn .lock-icon {
+    font-size: 18px;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+    .vodcast-grid {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .vodcast-section {
+        padding: 40px 5%;
+    }
+    
+    .vodcast-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .vodcast-intro {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .vodcast-info h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .vodcast-section {
+        padding: 30px 4%;
+    }
+    
+    .vodcast-intro {
+        font-size: 14px;
+    }
+    
+    .vodcast-info {
+        padding: 20px;
+    }
+    
+    .vodcast-info h3 {
+        font-size: 18px;
+    }
+    
+    .vodcast-meta {
+        gap: 12px;
+    }
+    
+    .vodcast-meta span {
+        font-size: 12px;
+    }
+}

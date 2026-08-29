@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dark Side - Thembinkosi Dladla</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #0a0a0f;
+            min-height: 100vh;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .header .back-link {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .header .back-link:hover {
+            color: #bac964;
+        }
+
+        .header .badge {
+            background: rgba(186, 201, 100, 0.1);
+            color: #bac964;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        h1 .highlight {
+            color: #bac964;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.06);
+            margin: 30px 0;
+        }
+
+        /* Content Sections */
+        .section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            border-color: rgba(186, 201, 100, 0.15);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .section .section-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .section h2 .highlight {
+            color: #bac964;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #bac964;
+            margin: 20px 0 10px 0;
+        }
+
+        .section .section-image {
+            width: 100%;
+            max-height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 15px 0 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .section p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .section .source {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 13px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            margin-top: 15px;
+        }
+
+        .section .source a {
+            color: #bac964;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .section .source a:hover {
+            color: #d0e070;
+            text-decoration: underline;
+        }
+
+        /* References */
+        .references-section {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            margin-top: 20px;
+        }
+
+        .references-section h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #bac964;
+            margin-bottom: 15px;
+        }
+
+        .references-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .references-section ul li {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            line-height: 1.8;
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .references-section ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #bac964;
+        }
+
+        .references-section ul li a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .references-section ul li a:hover {
+            color: #bac964;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+            
+            .section {
+                padding: 25px 20px;
+            }
+            
+            .section h2 {
+                font-size: 20px;
+            }
+            
+            .section .section-image {
+                max-height: 200px;
+            }
+            
+            .section h3 {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 22px;
+            }
+            
+            .section {
+                padding: 20px 15px;
+            }
+            
+            .section p {
+                font-size: 14px;
+            }
+            
+            .references-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <a href="dashboard.html" class="back-link">← Dashboard</a>
+            <span class="badge">Activity 4</span>
+        </div>
+
+        <h1>The <span class="highlight">Dark Side</span> of Technology</h1>
+
+        <div class="divider"></div>
+
+        <!-- Introduction -->
+        <div class="section">
+            <h2>Introduction</h2>
+            
+            <p>As an IT professional with a background in handling sensitive tax data, I am aware with the say "No technology is neutral". The tools we build to protect can easily be used to manipulate or destabilize data. While I previously identified Confidential Computing, AI Security Platforms, Multi-Agent Systems, Digital Provenance, and Geopatriation the reality is that each carry potential negative implications and they must be look at.</p>
+            <p>In this writing I will explore the negative applications of these three trends, viewed from both a global and a South African perspective.</p>
+        </div>
+
+        <!-- Multi-Agent Systems -->
+        <div class="section">
+            <h2>Multi-Agent Systems <span class="highlight">(MAS)</span></h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2cQTuKTwnuEJc_FempGPEa5lehtR0ErP-xrxOO35dm5JHNeBEwY_VlJA&s=10" alt="Multi-Agent Systems" class="section-image">
+            <p>Multi-agent systems are being designed to autonomously collaborate and complete complex workflows. The danger lies in their unpredictability. Recent revelations from OpenAI, Anthropic, and Meta disclosed that their AI models went rogue and hacked into other companies during controlled cyber-security tests. In MAS, this manifests as agents collaborating to bypass security constraints to achieve a goal, leading to catastrophic data breaches or physical damage in industrial settings.</p>
+            
+            <h3>Global Perspective</h3>
+            <p>Some AI researchers and public figures have called for stronger controls on the development and deployment of increasingly autonomous AI systems because of concerns about safety, misuse and longer-term risks. Without appropriate human supervision and validation, agents may act on inaccurate or hallucinated information, potentially allowing an error produced at one stage of a workflow to influence subsequent decisions.</p>
+            
+            <h3>Local Perspective (South Africa)</h3>
+            <p>MAS poses a direct threat to our financial systems. South Africa has already seen a rise in sophisticated financial scams utilizing deepfakes and social engineering. If a bank adopts a local Multi-Agent System to automate loan approvals or fraud detection, a single rogue agent could cause widespread financial damage or manipulate legitimate data to benefit an attacker.</p>
+            <div class="source"><strong>Sources:</strong> Guo et al. (2024) · Gartner (2025)</div>
+        </div>
+
+        <!-- AI Security Platforms -->
+        <div class="section">
+            <h2>AI Security Platforms <span class="highlight">(AISPs)</span></h2>
+            <img src="https://www.channele2e.com/api/thumbor-proxy?width=1920&src=https%3A%2F%2Ffiles.cyberriskalliance.com%2Fwp-content%2Fuploads%2F2025%2F05%2F050525_ai_cybersecurity.jpg" alt="AI Security Platform" class="section-image">
+            <p>Because AI security platforms can centralise visibility and control across multiple AI applications, compromising such a platform could potentially give attackers access to sensitive AI-related traffic, policies or data, depending on how the organisation has implemented the platform. However, their negative potential is profound: AISPs centralize massive amounts of highly sensitive organizational data. This turns them into a "super-target" for nation-state hackers. A breach of a single AISP gives an attacker a master key to the entire company's AI interactions, internal policies, and user data. Furthermore, there is also a risk that extensive monitoring capabilities could be repurposed for intrusive employee surveillance, particularly if organisations collect more behavioural information than is necessary for cybersecurity purposes.</p>
+            <p>Furthermore, the "trust" placed in these platforms is fragile. A 2026 lawsuit filed by a former Mayo Clinic research director alleges that she was demoted and ultimately dismissed after raising concerns about AI governance, research compliance and patient-data handling.</p>
+            
+            <h3>Local Perspective (South Africa)</h3>
+            <p>AISPs must comply with POPIA (Protection of Personal Information Act). However, POPIA provides important protections for personal information and regulates certain forms of automated decision making, but the increasing use of AI-based workplace monitoring creates practical questions about how these protections should be applied. During my internship I saw how sensitive financial data must be protected. If an AISP implemented there was breached, it would not just expose financials; it would expose the exact behaviours of the employees who handled that data, violating their constitutional right to privacy.</p>
+            <div class="source"><strong>Sources:</strong> Gartner (2025) · Mayo Clinic Lawsuit (2026)</div>
+        </div>
+
+        <!-- Geopatriation -->
+        <div class="section">
+            <h2>Geopatriation</h2>
+            <img src="https://th.bing.com/th/id/OIP.7wJPqJu_l90CDGUqe7p8jgHaD4?w=306&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Geopatriation - Global Data Flow" class="section-image">
+            <p>Geopatriation, the relocation of workloads from global hyperscale clouds to local environments, is often framed to reduce geopolitical risk. However, the world maps on internet censorship provided in our module highlight the dangerous flip side. Data sovereignty is frequently used by authoritarian governments as an excuse to physically restrict the flow of information. When data is local, it is easier for a state to restrict services such as WhatsApp, which China began blocking in 2017, restrict VPNs and other tools used to bypass censorship.</p>
+            
+            <h3>Global Perspective</h3>
+            <p>This creates a fractured internet and increases digital borders. Reporters Without Borders ranks the United States 64th out of 180 countries in its 2026 World Press Freedom Index, illustrating that strong technological infrastructure does not necessarily guarantee strong media freedom.</p>
+            
+            <h3>Local Perspective (South Africa)</h3>
+            <p>Geopatriation is incredibly expensive. It often forces businesses to build expensive local data centres, increasing costs (AI-flation) during a time of severe economic strain and a "digital divide". While it protects data locally under POPIA, it also gives the state a centralized point of surveillance. If the boundary between national security and political control were to weaken, concentrated local data could potentially be misused to identify or monitor political dissent.</p>
+            <div class="source"><strong>Sources:</strong> Gartner (2025, 2026) · Reporters Without Borders (2026)</div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="section">
+            <h2>Conclusion</h2>
+           
+            <p>My perspective as a student and someone with the experience in financial data and have looked the cybersecurity side also, is that the dark side of technology is not just a philosophical problem; it is an engineering problem. We cannot just build it and see what happens. Whether it's rogue AI agents or centralized security platforms, we must balance innovation with a strong ethical code. To do this, IT professionals must act as the guardians of truth, continually asking not just "can this be done?" but "should this be done?" and, critically, "what is the impact of this on the most vulnerable people in our society?"</p>
+        </div>
+
+        <!-- References -->
+        <div class="references-section">
+            <h3>References</h3>
+            <ul>
+                <li>Chen, G., Dong, S., Shu, Y., Zhang, G., Sesay, J., Karlsson, B., Fu, J. and Shi, Y. (2024) 'AutoAgents: A framework for automatic agent generation', <em>Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence</em>, pp. 22–30. doi: 10.24963/ijcai.2024/3.</li>
+                <li>Gartner (2025a) <em>Top Strategic Technology Trends for 2026: AI Security Platforms</em>. Available at: <a href="https://www.gartner.com/en/documents/7014998" target="_blank">Gartner</a></li>
+                <li>Gartner (2025b) <em>Top Strategic Technology Trends for 2026: Geopatriation</em>. Available at: <a href="https://www.gartner.com/en/documents/7079998" target="_blank">Gartner</a></li>
+                <li>Gartner (2026a) <em>Gartner predicts at least 15% of nations in volatile geopolitical zones will establish data embassy agreements by 2029</em>. Available at: <a href="https://www.gartner.com/en/newsroom/press-releases/2026-07-15-gartner-predicts-at-least-15-percent-of-nations-in-volatile-geopolitical-zones-will-establish-data-embassy-agreements-by-2029" target="_blank">Gartner</a></li>
+                <li>Gartner (2026b) <em>Gartner says worldwide sovereign cloud IaaS spending will total US$80 billion in 2026</em>. Available at: <a href="https://www.gartner.com/en/newsroom/press-releases/2026-02-09-gartner-says-worldwide-sovereign-cloud-iaas-spending-will-total-us-dollars-80-billion-in-2026" target="_blank">Gartner</a></li>
+                <li>Gartner (2026c) <em>Gartner Magic Quadrant for AI Governance Platforms</em>. Available at: <a href="https://www.gartner.com/en/documents/8006369" target="_blank">Gartner</a></li>
+                <li>Guo, T., Chen, X., Wang, Y., Chang, R., Pei, S., Chawla, N.V., Wiest, O. and Zhang, X. (2024) 'Large Language Model Based Multi-agents: A survey of progress and challenges', <em>Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence</em>, pp. 8048–8057. doi: 10.24963/ijcai.2024/890.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Thembinkosi Dladla · Academic Use Only</p>
+        </div>
+    </div>
+
+    <script>
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
