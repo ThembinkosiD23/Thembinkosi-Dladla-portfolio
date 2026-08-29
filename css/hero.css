@@ -7,7 +7,7 @@
     max-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; /* Changed from center to flex-end */
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@
     z-index: 0;
 }
 
-/* Dark Overlay */
+/* Dark Overlay - Gradient from left to right */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -35,30 +35,35 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.35) 0%,
-        rgba(0, 0, 0, 0.65) 60%,
-        rgba(0, 0, 0, 0.75) 100%
+        to right,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.2) 75%,
+        rgba(0, 0, 0, 0.05) 100%
     );
     z-index: 1;
 }
 
-/* Content */
+/* Content - Shifted to the Right */
 .site-hero .container {
     position: relative;
     z-index: 2;
     max-width: 1200px;
-    padding: 0 20px;
+    padding: 0 40px;
     width: 100%;
+    margin: 0; /* Remove auto margin */
+    margin-right: 5%; /* Push to the right */
 }
 
 .intro-text {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: left;
+    max-width: 650px;
+    margin: 0;
+    margin-left: auto; /* Push to the right */
     padding: 20px 0;
 }
 
+/* ===== Hero Content ===== */
 .hero-greeting {
     font-size: clamp(20px, 4vw, 28px);
     font-weight: 300;
@@ -81,20 +86,28 @@
 }
 
 .hero-role {
-    font-size: clamp(14px, 2.5vw, 24px);
+    font-size: clamp(14px, 2vw, 22px);
     font-weight: 400;
     color: #bac964;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     word-wrap: break-word;
+}
+
+.hero-sub-role {
+    font-size: clamp(12px, 1.5vw, 16px);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+    margin-bottom: 25px;
 }
 
 /* Buttons */
 .hero-actions {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -131,26 +144,52 @@
     border-color: #bac964;
 }
 
-/* ===== Mobile Specific Fixes ===== */
-@media screen and (max-width: 768px) {
-    .site-hero {
-        height: 100vh;
-        min-height: 100vh;
-        max-height: 100vh;
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+    .site-hero .container {
+        margin-right: 3%;
+        padding: 0 20px;
     }
     
     .intro-text {
-        padding: 10px 0;
+        max-width: 550px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .site-hero {
+        justify-content: center;
+    }
+    
+    .site-hero .container {
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .intro-text {
+        text-align: center;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px 15px;
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.55) 50%,
+            rgba(0, 0, 0, 0.4) 100%
+        );
     }
     
     .hero-greeting {
         font-size: 18px;
-        margin-bottom: 4px;
+        text-align: center;
     }
     
     .site-heading {
         font-size: 32px;
-        margin: 5px 0 10px 0;
+        text-align: center;
     }
     
     .site-heading strong {
@@ -160,10 +199,16 @@
     .hero-role {
         font-size: 13px;
         letter-spacing: 2px;
-        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .hero-sub-role {
+        font-size: 12px;
+        text-align: center;
     }
     
     .hero-actions {
+        justify-content: center;
         gap: 12px;
         flex-direction: column;
         align-items: center;
@@ -200,6 +245,10 @@
     .hero-role {
         font-size: 11px;
         letter-spacing: 1.5px;
+    }
+    
+    .hero-sub-role {
+        font-size: 10px;
     }
     
     .btn {

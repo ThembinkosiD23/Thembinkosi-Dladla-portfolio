@@ -69,6 +69,15 @@
     letter-spacing: 1px;
 }
 
+.Focus-title {
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20 px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
 .education-list {
     display: flex;
     flex-direction: column;
@@ -427,4 +436,13 @@
         font-size: 16px;
         padding: 12px 20px;
     }
+}
+
+.toggle-card {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-top: 30px;
 }
