@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         if (isOpen) {
-            // Close
+         
             content.classList.remove('open');
             if (headerElement) {
                 headerElement.classList.remove('active');
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         } else {
-            // Open
+            
             content.classList.add('open');
             if (headerElement) {
                 headerElement.classList.add('active');
