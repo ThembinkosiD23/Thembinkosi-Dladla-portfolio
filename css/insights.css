@@ -345,6 +345,29 @@
     }
 }
 
+.ir-more {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ir-more-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: rgba(186, 201, 100, 0.1);
+    border: 1px solid rgba(186, 201, 100, 0.25);
+    border-radius: 50px;
+    color: #bac964;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.ir-more-btn:hover {
+    background: rgba(186, 201, 100, 0.2);
+    border-color: #bac964;
+    transform: translateY(-2px);
+}
 @media screen and (max-width: 480px) {
     .ir-section {
         padding: 40px 4%;
