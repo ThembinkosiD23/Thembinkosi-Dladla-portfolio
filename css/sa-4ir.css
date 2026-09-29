@@ -317,3 +317,124 @@
         font-size: 14px;
     }
 }
+
+/* ===== Figure / Image Block ===== */
+.sa-figure {
+    margin: 0 0 50px 0;
+}
+
+/* ===== Tool Cards (Zuzi, SafeSigns, rAInbow) ===== */
+.sa-tool-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    padding: 25px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 3px solid #bac964;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.sa-tool-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(186, 201, 100, 0.2);
+    border-left-color: #bac964;
+    transform: translateX(6px);
+}
+
+.sa-tool-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #bac964;
+    margin-bottom: 10px;
+}
+
+.sa-tool-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0;
+}
+
+/* ===== Bulleted Lists ===== */
+.sa-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.sa-list li {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 18px 22px 18px 48px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.sa-list li:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(186, 201, 100, 0.15);
+}
+
+.sa-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 22px;
+    top: 18px;
+    color: #bac964;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.sa-list li strong {
+    color: #bac964;
+    font-weight: 600;
+}
+
+/* ===== Responsive Additions ===== */
+@media screen and (max-width: 768px) {
+    .sa-tool-card {
+        padding: 20px 22px;
+    }
+
+    .sa-tool-card h4 {
+        font-size: 16px;
+    }
+
+    .sa-tool-card p {
+        font-size: 14px;
+    }
+
+    .sa-list li {
+        padding: 15px 18px 15px 40px;
+        font-size: 14px;
+    }
+
+    .sa-list li::before {
+        left: 18px;
+        top: 15px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sa-tool-card {
+        padding: 18px 18px;
+    }
+
+    .sa-list li {
+        padding: 12px 15px 12px 34px;
+        font-size: 13px;
+    }
+
+    .sa-list li::before {
+        left: 14px;
+        top: 12px;
+        font-size: 14px;
+    }
+}
