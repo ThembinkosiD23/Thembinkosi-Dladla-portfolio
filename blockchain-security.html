@@ -1,0 +1,215 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Security in SA Banking - Thembinkosi Dladla</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/sa-4ir.css">
+</head>
+<body class="sa-page">
+
+<!-- ===== NAVBAR ===== -->
+<nav class="site-navbar scrolled" id="pb-navbar">
+    <div class="container">
+        <button class="navbar-toggler" id="navToggle" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav" id="navMenu">
+                <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#vodcast">Vodcast</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#insights">4IR &amp; 5IR</a></li>
+                <li class="nav-item"><a class="nav-link" href="sa-4ir-5ir.html">SA Position</a></li>
+                <li class="nav-item"><a class="nav-link" href="gbv-ai.html">GBV &amp; AI</a></li>
+                <li class="nav-item"><a class="nav-link active" href="blockchain-security.html">Blockchain</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== ARTICLE ===== -->
+<article class="sa-article">
+    <div class="sa-container">
+
+        <!-- Header -->
+        <header class="sa-header">
+
+            <h1>Securing the Digital Vault:</h1>
+            <h1>Why Blockchain Security is Critical for South African Banking</h1>
+            
+        </header>
+
+        <!-- Hero Image -->
+        <figure class="sa-figure">
+            <img src="https://th.bing.com/th/id/R.5e4c4270c967e56a455794f930903d74?rik=17Mn3iDqHuylEA&pid=ImgRaw&r=0" alt="Abstract blockchain network with glowing nodes and connections" class="sa-image">
+        </figure>
+
+        <!-- Introduction -->
+        <section class="sa-section">
+            <h3>Introduction</h3>
+            <p>
+                When we study the Fourth Industrial Revolution (4IR), blockchain was introduced as one of the 
+                technologies underpinning 4IR (and beyond). When the module introduced blockchain, it did so 
+                primarily through the lens of Bitcoin highlighting it as a new, anonymous, and secure financial 
+                system with wide-ranging implications and possibilities.
+            </p>
+            <p>
+                However, for someone intending to build a career in the Financial Services sector, specifically 
+                within retail and commercial banking in South Africa, that high-level introduction leaves massive 
+                gaps. To understand how blockchain will actually impact banking, I needed to know how the 
+                architecture works, how it processes payments, and how it fails.
+            </p>
+            <p>
+                To bridge this gap, I completed four courses on Udemy: 
+                <a href="https://www.udemy.com/share/10208O3@xv2UiX_UHtGYG1C2fqy_2NY8y26CIKvvZqxZi_CqKZJ_GWSebxnZU_gIllIH4jV3cw==/" target="_blank" rel="noopener noreferrer" class="sa-inline-link">Blockchain — Complete Reference</a>, 
+                <a href="https://www.udemy.com/share/101xPo3@bm5AtxPf5JgMYplfsp7lCQqH22icWaakEyFIfnrz7ay7Wge9MR1psjYS2YYaqX1pwg==/" target="_blank" rel="noopener noreferrer" class="sa-inline-link">Blockchain Theory 101</a>, 
+                <a href="https://www.udemy.com/share/101Uze3@0n87rBu8K7eWNsi8z9o9PdGksl6tc7TB4Mot_l5NrOr_xGtF7nY3Ca1DqVh25sstBg==/" target="_blank" rel="noopener noreferrer" class="sa-inline-link">Bitcoin or How I Learned to Stop Worrying and Love Crypto</a>, and 
+                <a href="https://www.udemy.com/share/108mgm3@Q0VPifrNTX5Ytsi4mCzLKcV8HjGsTwwQgucDkWLRjJ6yfZsaDJjpG0_YowQ3LSKg2A==/" target="_blank" rel="noopener noreferrer" class="sa-inline-link">Blockchain Security</a>. 
+                These courses extended my knowledge far beyond the introductory 4IR basics, moving from the general 
+                promise of a "secure financial system" to the harsh technical realities of network topology, 
+                cryptography, regulatory risk, smart contract vulnerabilities, and cyber threats.
+            </p>
+        </section>
+
+        <!-- Technical Deep Dive -->
+        <section class="sa-section">
+            <h3>Extending Beyond the Basics</h3>
+            <p>
+                The module introduced blockchain as an anonymous and secure system. What my courses taught me 
+                is that <strong>code is law</strong>, and sometimes, the law has massive loopholes.
+            </p>
+    
+            <p>
+                From Blockchain Theory 101 and Complete Reference, I learned about Network Topology, 
+                the Longest Chain Rule, and Consensus Algorithms (like Byzantine Fault Tolerance). I quickly moved 
+                past the surface-level definition of a smart contract and began to understand the real-world 
+                Blockchain Risks:Technical, Regulatory, and Perception. I learned the specific 
+                mechanics of how decentralised applications are exploited. Two major technical concepts stood out 
+                to me: <strong>Re-entrancy attacks</strong> and <strong>On-chain Threat Detection</strong>.
+            </p>
+        </section>
+
+        <!-- Re-entrancy -->
+        <section class="sa-section">
+            <h3>Re-entrancy Attacks</h3>
+            <p>
+                A re-entrancy attack is a specific vulnerability in smart contracts where an attacker repeatedly 
+                calls a withdrawal function before the contract updates its internal balance. Imagine a bank teller 
+                who hands you your cash but forgets to update your account balance before you ask for the cash 
+                again and again. On a blockchain, this happens in milliseconds and can drain a protocol of 
+                millions of dollars.
+            </p>
+        </section>
+
+        <!-- On-chain Threat Detection -->
+        <section class="sa-section">
+            <h3>On-chain Threat Detection</h3>
+            <p>
+                To counter this, I learned about real-time threat detection tools like Forta. 
+                Instead of just auditing code once, these tools use decentralised bots to monitor the blockchain 
+                24/7, flagging suspicious activities (like flash loans or malicious contract deployments) before 
+                funds can be stolen.
+            </p>
+        </section>
+
+        <!-- Bitcoin Insights -->
+        <section class="sa-section">
+            <h3>What Bitcoin Taught Me About Banking</h3>
+            <p>
+                Interestingly, it was the Bitcoin course that provided the most surprising practical insights for 
+                banking. I learned about Cryptography, Cold Storage, and Paper Wallets. For a bank, secure asset 
+                storage is everything. I also learned about Transaction Fees and specifically compared Bitcoin 
+                Payment Networks to VISA. This was a lightbulb moment: Traditional banking (like VISA) is fast but relies on centralised trust. Blockchain is secure, 
+                but struggles with scalability and fees during high traffic.
+            </p>
+        
+        </section>
+
+        <!-- Image: Cold Storage / Vault -->
+        <figure class="sa-figure">
+            <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1200&h=500&fit=crop" alt="Abstract representation of cold storage and cryptography" class="sa-image">
+        </figure>
+
+        <!-- Why This Matters for SA Banking -->
+        <section class="sa-section">
+            <h3>Why This Matters for South African Banking</h3>
+            <p>
+                The decision to study these specific courses makes complete sense in the context of the financial 
+                sector. As local banks explore blockchain for cross-border payments, trade finance, or asset 
+                tokenisation, they inherit the immense security risks of the Web3 ecosystem.
+            </p>
+            <p>
+                Banks are the ultimate guardians of trust. If a South African bank deploys a smart contract with 
+                a re-entrancy vulnerability and a hacker drains the system, that isn't just a tech glitch. It is 
+                a catastrophic financial loss and a direct violation of the Protection of Personal Information Act 
+                (POPIA). A blockchain hack is a massive regulatory and reputational crisis.
+            </p>
+            <p>
+                My extended learning showed me that you cannot just "add blockchain" to a bank. You have to 
+                overhaul the risk management. You need teams that understand cryptography, consensus mechanisms, 
+                and the specific regulatory risks that come with decentralised ledgers.
+            </p>
+        </section>
+
+        <!-- Take Away -->
+        <section class="sa-section">
+            <h3>Conclusion</h3>
+            <p>
+                The 4IR promises a decentralised financial future, but my extended learning has shown me that it 
+                also introduces decentralised risk. South African banks cannot afford to treat blockchain as just 
+                a buzzword. To safely innovate, financial institutions must invest heavily in smart contract 
+                auditing, real-time threat detection, and cultivating internal teams who deeply understand the 
+                mechanics of the Web3 ecosystem. The technology is here to stay; the question is whether our 
+                financial sector will be secure enough to use it.
+            </p>
+        </section>
+
+        <!-- Video -->
+        <section class="sa-section">
+            <h3>Watch My Video</h3>
+            <div class="sa-video-wrapper">
+                <video controls preload="metadata" poster="assets/videos/blockchain/video-poster.mp4">
+                    <source src="assets/videos/blockchain/video-poster.mp4" type="video/mp4">
+                    Your browser does not support the video tag.s
+                </video>
+            </div>
+        </section>
+
+        <!-- References -->
+        <section class="sa-references">
+            <h3>References</h3>
+            <ul>
+                <li>Udemy (2024) <em>Blockchain — Complete Reference</em>. Available at: <a href="https://www.udemy.com/share/10208O3@xv2UiX_UHtGYG1C2fqy_2NY8y26CIKvvZqxZi_CqKZJ_GWSebxnZU_gIllIH4jV3cw==/" target="_blank" rel="noopener noreferrer">Udemy</a>.</li>
+                <li>Udemy (2024) <em>Blockchain Theory 101</em>. Available at: <a href="https://www.udemy.com/share/101xPo3@bm5AtxPf5JgMYplfsp7lCQqH22icWaakEyFIfnrz7ay7Wge9MR1psjYS2YYaqX1pwg==/" target="_blank" rel="noopener noreferrer">Udemy</a>.</li>
+                <li>Udemy (2024) <em>Bitcoin or How I Learned to Stop Worrying and Love Crypto</em>. Available at: <a href="https://www.udemy.com/share/101Uze3@0n87rBu8K7eWNsi8z9o9PdGksl6tc7TB4Mot_l5NrOr_xGtF7nY3Ca1DqVh25sstBg==/" target="_blank" rel="noopener noreferrer">Udemy</a>.</li>
+                <li>Udemy (2024) <em>Blockchain Security</em>. Available at: <a href="https://www.udemy.com/share/108mgm3@Q0VPifrNTX5Ytsi4mCzLKcV8HjGsTwwQgucDkWLRjJ6yfZsaDJjpG0_YowQ3LSKg2A==/" target="_blank" rel="noopener noreferrer">Udemy</a>.</li>
+                <li>Republic of South Africa (2013) <em>Protection of Personal Information Act 4 of 2013</em>. Pretoria: Government Printer.</li>
+            </ul>
+        </section>
+
+        <!-- Back -->
+        <div class="sa-back">
+            <a href="index.html">← Back to Portfolio</a>
+        </div>
+
+    </div>
+</article>
+
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => navMenu.classList.toggle('open'));
+    }
+</script>
+
+</body>
+</html>
